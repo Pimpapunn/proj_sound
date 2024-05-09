@@ -1,0 +1,22 @@
+{
+  "name": "iotesp32",
+  "version": "1.0.0",
+  "description": "iot esp32",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "iot",
+    "esp32"
+  ],
+  "author": "pimpapun",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.5"
+  }
+}
