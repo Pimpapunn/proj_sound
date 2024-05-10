@@ -8,7 +8,7 @@ services:
       - POSTGRES_PASSWORD=1234
       - POSTGRES_DB=geodb
     ports:
-      - 5433:5432
+      - 5434:5432
     volumes:
       - ./postgis:/docker-entrypoint-initdb.d
 
@@ -23,5 +23,5 @@ services:
     volumes:
       - ./nodejs:/app
     ports:
-      - 3000:3000
+      - 3200:3000
     command: bash -c "npm i && npm i -g nodemon && nodemon server.js"
