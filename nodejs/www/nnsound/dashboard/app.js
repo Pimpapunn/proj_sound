@@ -27,7 +27,7 @@ var optionstemp = {
         }
     ],
 
-    colors: ["#F4A460", "#FF6EB4", "#008B8B", "#EE4000", "#00B2EE"],
+    colors: ["#F4A460", "#FF6EB4", "#008B8B", "#EE4000", "#00B2EE", "#9932CC"],
 
     chart: {
         height: 350,
@@ -92,7 +92,7 @@ var optionsSound = {
         }
     ],
 
-    colors: ["#F4A460", "#FF6EB4", "#008B8B", "#EE4000", "#00B2EE"],
+    colors: ["#F4A460", "#FF6EB4", "#008B8B", "#EE4000", "#00B2EE", "#9932CC"],
 
     chart: {
         height: 350,
@@ -155,7 +155,7 @@ var optionsRh = {
         }
     ],
 
-    colors: ["#F4A460", "#FF6EB4", "#008B8B", "#EE4000", "#00B2EE"],
+    colors: ["#F4A460", "#FF6EB4", "#008B8B", "#EE4000", "#00B2EE", "#9932CC"],
     chart: {
         height: 350,
         type: 'line',
