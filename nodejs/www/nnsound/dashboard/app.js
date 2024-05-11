@@ -20,6 +20,10 @@ var optionstemp = {
         {
             name: '05',
             data: []
+        },
+        {
+            name: '06',
+            data: []
         }
     ],
 
@@ -81,6 +85,10 @@ var optionsSound = {
         {
             name: '05',
             data: []
+        },
+        {
+            name: '06',
+            data: []
         }
     ],
 
@@ -140,6 +148,10 @@ var optionsRh = {
         {
             name: '05',
             data: []
+        },
+        {
+            name: '06',
+            data: []
         }
     ],
 
@@ -189,6 +201,8 @@ window.setInterval(function () {
         const temp2 = r.data.filter((a) => { return a.stationname == '03' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.temperature) }))
         const temp3 = r.data.filter((a) => { return a.stationname == '04' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.temperature) }))
         const temp4 = r.data.filter((a) => { return a.stationname == '05' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.temperature) }))
+        const temp5 = r.data.filter((a) => { return a.stationname == '06' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.temperature) }))
+
 
         //const rh = r.data.map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
         const rh = r.data.filter((a) => { return a.stationname == '01' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
@@ -196,20 +210,23 @@ window.setInterval(function () {
         const rh2 = r.data.filter((a) => { return a.stationname == '03' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
         const rh3 = r.data.filter((a) => { return a.stationname == '04' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
         const rh4 = r.data.filter((a) => { return a.stationname == '05' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
+        const rh5 = r.data.filter((a) => { return a.stationname == '06' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
+
 
         const sound = r.data.filter((a) => { return a.stationname == '01' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
         const sound1 = r.data.filter((a) => { return a.stationname == '02' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
         const sound2 = r.data.filter((a) => { return a.stationname == '03' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
         const sound3 = r.data.filter((a) => { return a.stationname == '04' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
         const sound4 = r.data.filter((a) => { return a.stationname == '05' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound5 = r.data.filter((a) => { return a.stationname == '06' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
 
 
         //console.log(temp)
         console.log(charttemp)
 
-        charttemp.updateSeries([{ data: temp }, { data: temp1 }, { data: temp2 }, { data: temp3 }, { data: temp4 }])
-        chartRh.updateSeries([{ data: rh }, { data: rh1 }, { data: rh2 }, { data: rh3 }, { data: rh4 }])
-        chartsound.updateSeries([{ data: sound }, { data: sound1 }, { data: sound2 }, { data: sound3 }, { data: sound4 }])
+        charttemp.updateSeries([{ data: temp }, { data: temp1 }, { data: temp2 }, { data: temp3 }, { data: temp4 }, { data: temp5 }])
+        chartRh.updateSeries([{ data: rh }, { data: rh1 }, { data: rh2 }, { data: rh3 }, { data: rh4 }, { data: rh5 }])
+        chartsound.updateSeries([{ data: sound }, { data: sound1 }, { data: sound2 }, { data: sound3 }, { data: sound4 }, { data: sound5 }])
 
     })
 }, 3000)
