@@ -24,6 +24,22 @@ var optionstemp = {
         {
             name: '06',
             data: []
+        },
+        {
+            name: '07',
+            data: []
+        },
+        {
+            name: '08',
+            data: []
+        },
+        {
+            name: '09',
+            data: []
+        },
+        {
+            name: '10',
+            data: []
         }
     ],
 
@@ -89,6 +105,22 @@ var optionsSound = {
         {
             name: '06',
             data: []
+        },
+        {
+            name: '07',
+            data: []
+        },
+        {
+            name: '08',
+            data: []
+        },
+        {
+            name: '09',
+            data: []
+        },
+        {
+            name: '10',
+            data: []
         }
     ],
 
@@ -152,6 +184,22 @@ var optionsRh = {
         {
             name: '06',
             data: []
+        },
+        {
+            name: '07',
+            data: []
+        },
+        {
+            name: '08',
+            data: []
+        },
+        {
+            name: '09',
+            data: []
+        },
+        {
+            name: '10',
+            data: []
         }
     ],
 
@@ -202,6 +250,10 @@ window.setInterval(function () {
         const temp3 = r.data.filter((a) => { return a.stationname == '04' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.temperature) }))
         const temp4 = r.data.filter((a) => { return a.stationname == '05' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.temperature) }))
         const temp5 = r.data.filter((a) => { return a.stationname == '06' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.temperature) }))
+        const temp6 = r.data.filter((a) => { return a.stationname == '07' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.temperature) }))
+        const temp7 = r.data.filter((a) => { return a.stationname == '08' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.temperature) }))
+        const temp8 = r.data.filter((a) => { return a.stationname == '09' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.temperature) }))
+        const temp9 = r.data.filter((a) => { return a.stationname == '10' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.temperature) }))
 
 
         //const rh = r.data.map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
@@ -211,7 +263,10 @@ window.setInterval(function () {
         const rh3 = r.data.filter((a) => { return a.stationname == '04' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
         const rh4 = r.data.filter((a) => { return a.stationname == '05' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
         const rh5 = r.data.filter((a) => { return a.stationname == '06' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
-
+        const rh6 = r.data.filter((a) => { return a.stationname == '07' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
+        const rh7 = r.data.filter((a) => { return a.stationname == '08' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
+        const rh8 = r.data.filter((a) => { return a.stationname == '09' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
+        const rh9 = r.data.filter((a) => { return a.stationname == '10' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.humidty) }))
 
         const sound = r.data.filter((a) => { return a.stationname == '01' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
         const sound1 = r.data.filter((a) => { return a.stationname == '02' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
@@ -219,14 +274,18 @@ window.setInterval(function () {
         const sound3 = r.data.filter((a) => { return a.stationname == '04' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
         const sound4 = r.data.filter((a) => { return a.stationname == '05' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
         const sound5 = r.data.filter((a) => { return a.stationname == '06' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound6 = r.data.filter((a) => { return a.stationname == '07' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound7 = r.data.filter((a) => { return a.stationname == '08' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound8 = r.data.filter((a) => { return a.stationname == '09' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound9 = r.data.filter((a) => { return a.stationname == '10' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
 
 
         //console.log(temp)
         console.log(charttemp)
 
-        charttemp.updateSeries([{ data: temp }, { data: temp1 }, { data: temp2 }, { data: temp3 }, { data: temp4 }, { data: temp5 }])
-        chartRh.updateSeries([{ data: rh }, { data: rh1 }, { data: rh2 }, { data: rh3 }, { data: rh4 }, { data: rh5 }])
-        chartsound.updateSeries([{ data: sound }, { data: sound1 }, { data: sound2 }, { data: sound3 }, { data: sound4 }, { data: sound5 }])
+        charttemp.updateSeries([{ data: temp }, { data: temp1 }, { data: temp2 }, { data: temp3 }, { data: temp4 }, { data: temp5 }, { data: temp6 }, { data: temp7 }, { data: temp8 }, { data: temp9 }])
+        chartRh.updateSeries([{ data: rh }, { data: rh1 }, { data: rh2 }, { data: rh3 }, { data: rh4 }, { data: rh5 }, { data: rh6 }, { data: rh7 }, { data: rh8 }, { data: rh9 }])
+        chartsound.updateSeries([{ data: sound }, { data: sound1 }, { data: sound2 }, { data: sound3 }, { data: sound4 }, { data: sound5 }, { data: sound5 }, { data: sound6 }, { data: sound7 }, { data: sound8 }, { data: sound9 }])
 
     })
 }, 3000)
