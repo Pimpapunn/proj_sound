@@ -14,6 +14,10 @@ var optionstemp = {
             data: []
         },
         {
+            name: '04',
+            data: []
+        },
+        {
             name: '05',
             data: []
         },
