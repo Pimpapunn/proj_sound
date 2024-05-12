@@ -26,9 +26,9 @@ app.get('/api/data', (req, res) => {
 app.get('/api/senddata/:stationname/:temp/:sound/:RH', (req, res) => {
     const { stationname, temp, sound, RH } = req.params;
 
-    const sql = `insert into "154499".parks_sound(
+    const sql = `insert into "154499".sound_scape(
         stationname,temperature,humidty,sound_level,DateTime)values(
-            '${stationname}',${temp},${RH},${sound},now()  
+            '${stationname}',${temp},${RH},${sound},{now()  }
         )`;
     console.log(sql)
 
