@@ -14,7 +14,7 @@ const pg = new Pool({
 
 app.get('/api/data', (req, res) => {
     let sql = `select *,datetime as ts 
-                    from "154499".parks_sound 
+                    from "154499".sound_scape
                     order by datetime DESC LIMIT 30`;
 
     pg.query(sql).then((r) => {
