@@ -14,7 +14,7 @@ const pg = new Pool({
 
 app.get('/api/data', (req, res) => {
     let sql = `select *,datetime as ts 
-                    from "154499".sound_scape
+                    from "154499".parks_sound
                     order by datetime DESC LIMIT 30`;
 
     pg.query(sql).then((r) => {
@@ -26,7 +26,7 @@ app.get('/api/data', (req, res) => {
 app.get('/api/senddata/:stationname/:temp/:sound/:RH', (req, res) => {
     const { stationname, temp, sound, RH } = req.params;
 
-    const sql = `insert into "154499".sound_scape(
+    const sql = `insert into "154499".parks_sound(
         stationname,temperature,humidty,sound_level,DateTime)values(
             '${stationname}',${temp},${RH},${sound},{now()  }
         )`;
