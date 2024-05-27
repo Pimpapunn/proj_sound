@@ -117,6 +117,10 @@ var optionsSound = {
         {
             name: '09',
             data: []
+        },
+        {
+            name: '10',
+            data: []
         }
     ],
 
@@ -273,7 +277,7 @@ window.setInterval(function () {
         const sound6 = r.data.filter((a) => { return a.stationname == '07' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
         const sound7 = r.data.filter((a) => { return a.stationname == '08' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
         const sound8 = r.data.filter((a) => { return a.stationname == '09' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
-        //const sound9 = r.data.filter((a) => { return a.stationname == '10' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound9 = r.data.filter((a) => { return a.stationname == '10' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
 
 
         //console.log(temp)
