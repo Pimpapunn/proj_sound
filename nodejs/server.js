@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+const axios = require("axios");
 const { Pool } = require('pg');
 
 const pg = new Pool({
@@ -23,12 +23,12 @@ app.get('/api/data', (req, res) => {
     })
 })
 
-app.get('/api/senddata/:stationname/:temp/:sound/:RH', (req, res) => {
-    const { stationname, temp, sound, RH } = req.params;
+app.get('/api/senddata/:stationname/:sound', (req, res) => {
+    const { stationname, sound } = req.params;
 
     const sql = `insert into "154499".parks_sound(
-        stationname,temperature,humidty,sound_level,DateTime)values(
-            '${stationname}',${temp},${RH},${sound},now()  
+        stationname,sound_level,DateTime)values(
+            '${stationname}',${sound},now()  
         )`;
     console.log(sql)
 
@@ -44,3 +44,4 @@ app.use('/', express.static('www'))
 app.listen(3000, () => {
     console.log(`http://localhost:3000`);
 });
+
