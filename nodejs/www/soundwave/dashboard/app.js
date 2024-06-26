@@ -96,7 +96,7 @@ window.setInterval(function () {
 
         // charttemp.updateSeries([{ data: temp }, { data: temp1 }, { data: temp2 }, { data: temp3 }, { data: temp4 }, { data: temp5 }, { data: temp6 }, { data: temp7 }, { data: temp8 }, { data: temp9 }])
         // chartRh.updateSeries([{ data: rh }, { data: rh1 }, { data: rh2 }, { data: rh3 }, { data: rh4 }, { data: rh5 }, { data: rh6 }, { data: rh7 }, { data: rh8 }, { data: rh9 }])
-        chartsound.updateSeries([{ data: sound }, { data: sound1 }, { data: sound2 }, { data: sound3 }, { data: sound4 }, { data: sound5 }, { data: sound5 }, { data: sound6 }, { data: sound7 }, { data: sound8 }, { data: sound9 }])
+        chartsound.updateSeries([{ data: sound }, { data: sound1 }, { data: sound2 }, { data: sound3 }, { data: sound4 }, { data: sound5 }, { data: sound6 }, { data: sound7 }, { data: sound8 }, { data: sound9 }])
     })
 }, 3000)
 
