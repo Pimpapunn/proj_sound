@@ -43,7 +43,7 @@ var optionsSound = {
         }
     ],
 
-    colors: ["#F4A460", "#FF6EB4", "#008B8B", "#EE4000", "#00B2EE", "#9932CC"],
+    colors: ["#F4A460", "#FF6EB4", "#008B8B", "#EE4000", "#00B2EE", "#9932CC", "#000080", "#006400", "#8B4513", " #FF1493"],
 
     chart: {
         height: 350,
