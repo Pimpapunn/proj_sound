@@ -25,3 +25,12 @@ services:
     ports:
       - 3200:3000
     command: bash -c "npm i && npm i -g nodemon && nodemon server.js"
+
+  python:
+    build:
+      context: ./python/
+      dockerfile: Dockerfile
+    volumes:
+      - ./python:/app
+    ports:
+      - '5100:5000'
