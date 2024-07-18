@@ -99,7 +99,7 @@ header a {
 .carousel .list .item .content .btn-2 {
     background-color: #000;
     color: #f4efef;
-    border: 1px solid #eee;
+    border: none;
     font-family: Poppins;
     font-weight: 500;
 }
