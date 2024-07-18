@@ -69,9 +69,9 @@ header a {
 .carousel .list .item .content .title,
 .carousel .list .item .content .topic {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1em;
     list-style: 1.3em;
-    color: #eee;
+    color: #FF4500;
 }
 
 .carousel .list .item .content .buttons {
