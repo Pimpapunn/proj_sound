@@ -81,24 +81,19 @@ header a {
 }
 
 .carousel .list .item .content .buttons {
-    padding: 20px 50px;
-    font-size: 1.5rem;
-    font-family: Poppins;
-    cursor: pointer;
-    border: 0px;
-    background: transparent;
-    position: relative;
-    margin: 20px;
-    transition: all 0.25s ease;
+    display: grid;
+    grid-template-columns: repeat(3, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
 }
 
 .carousel .list .item .content .btn-1 {
-    background: #000;
-    color: #eee;
-    border-radius: 30px;
-    transition: all 0.25s ease;
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
     font-family: Poppins;
-    left: 50%;
+    font-weight: 500;
 }
 
 .carousel .list .item .content .btn-2:nth-child(1) {
