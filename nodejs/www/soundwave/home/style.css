@@ -89,9 +89,9 @@ header a {
 }
 
 .carousel .list .item .content .btn-1 {
+    background-color: #000;
+    color: #f4efef;
     border: none;
-    background-color: #eee;
-    letter-spacing: 3px;
     font-family: Poppins;
     font-weight: 500;
 }
@@ -105,9 +105,9 @@ header a {
 }
 
 .carousel .list .item .content .btn-3 {
+    background-color: #000;
+    color: #f4efef;
     border: none;
-    background-color: #eee;
-    letter-spacing: 3px;
     font-family: Poppins;
     font-weight: 500;
 }
