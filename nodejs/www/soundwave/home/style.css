@@ -103,6 +103,12 @@ header a {
 }
 
 .carousel .list .item .content button:nth-child(2) {
+    background-color: #eee;
+    color: #f4efef;
+    border: 1px solid #eee;
+}
+
+.carousel .list .item .content button:nth-child(3) {
     background-color: transparent;
     color: #f4efef;
     border: 1px solid #eee;
