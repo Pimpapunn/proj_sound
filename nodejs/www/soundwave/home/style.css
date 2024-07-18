@@ -54,7 +54,7 @@ header a {
     width: 1140px;
     max-width: 80%;
     left: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     padding-right: 30%;
     box-sizing: border-box;
     color: #ffffff;
