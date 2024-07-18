@@ -20,6 +20,8 @@ header {
     height: 50px;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 100;
 }
 
 header a {
@@ -32,4 +34,9 @@ header a {
     height: 100vh;
     overflow: hidden;
     margin-top: -50px;
+    position: relative;
+}
+
+.carousel .list .item {
+    position: absolute;
 }
