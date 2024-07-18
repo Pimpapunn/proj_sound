@@ -98,7 +98,7 @@ header a {
     border-radius: 30px;
     transition: all 0.25s ease;
     font-family: Poppins;
-
+    left: 50%;
 }
 
 .carousel .list .item .content .btn-2:nth-child(1) {
