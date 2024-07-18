@@ -84,13 +84,13 @@ header a {
 
 .carousel .list .item .content button {
     border: none;
-    background-color: transparent;
+    background-color: #eee;
     letter-spacing: 3px;
     font-family: Poppins;
     font-weight: 500;
 }
 
-.carousel .list .item .content button:nth-last-child(3) {
+.carousel .list .item .content button:nth-child(3) {
     background-color: transparent;
     color: #f4efef;
     border: 1px solid #eee;
