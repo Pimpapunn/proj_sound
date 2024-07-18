@@ -3,7 +3,7 @@
 body {
     font-family: Poppins;
     background-color: #000;
-    color: #000000;
+    color: #f5f5f5;
     margin: 0;
     font-size: 20px;
 }
@@ -71,6 +71,7 @@ header a {
     font-weight: bold;
     font-size: 2em;
     list-style: 1.3em;
+    color: #000;
 }
 
 .carousel .list .item .content .topic {
