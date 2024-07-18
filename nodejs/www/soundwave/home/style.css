@@ -92,6 +92,7 @@ header a {
     border: none;
     background-color: #eee;
     letter-spacing: 3px;
+    font-family: Poppins;
     font-weight: 500;
 }
 
@@ -99,10 +100,14 @@ header a {
     background-color: transparent;
     color: #f4efef;
     border: 1px solid #eee;
+    font-family: Poppins;
+    font-weight: 500;
 }
 
 .carousel .list .item .content .btn-3 {
     background-color: transparent;
     color: #f4efef;
     border: 1px solid #eee;
+    font-family: Poppins;
+    font-weight: 500;
 }
