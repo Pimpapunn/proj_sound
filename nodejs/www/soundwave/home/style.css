@@ -71,9 +71,27 @@ header a {
     font-weight: bold;
     font-size: 2em;
     list-style: 1.3em;
-    color: #f3f3f3;
+    color: #eee;
 }
 
-.carousel .list .item .content .topic {
-    color: #f1683a;
+.carousel .list .item .content .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.carousel .list .item .content button {
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.carousel .list .item .content button:nth-last-child(3) {
+    background-color: transparent;
+    color: #f4efef;
+    border: 1px solid #eee;
 }
