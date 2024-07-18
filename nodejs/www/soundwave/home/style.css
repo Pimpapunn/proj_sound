@@ -84,7 +84,7 @@ header a {
 
 .carousel .list .item .content button {
     border: none;
-    background-color: #eee;
+    background-color: transparent;
     letter-spacing: 3px;
     font-family: Poppins;
     font-weight: 500;
