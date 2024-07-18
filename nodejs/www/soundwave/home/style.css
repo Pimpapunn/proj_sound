@@ -105,9 +105,9 @@ header a {
 }
 
 .carousel .list .item .content .btn-3 {
-    background-color: transparent;
-    color: #f4efef;
-    border: 1px solid #eee;
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
     font-family: Poppins;
     font-weight: 500;
 }
