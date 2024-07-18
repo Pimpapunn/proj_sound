@@ -66,12 +66,18 @@ header a {
     letter-spacing: 10px;
 }
 
-.carousel .list .item .content .title,
+.carousel .list .item .content .title {
+    font-weight: bold;
+    font-size: 2em;
+    list-style: 1.3em;
+    color: #eee;
+}
+
 .carousel .list .item .content .topic {
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.5em;
     list-style: 1.3em;
-    color: #FF4500;
+    color: #04046d;
 }
 
 .carousel .list .item .content .buttons {
