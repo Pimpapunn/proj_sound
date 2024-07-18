@@ -81,28 +81,32 @@ header a {
 }
 
 .carousel .list .item .content .buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 130px);
-    grid-template-rows: 40px;
-    gap: 5px;
-    margin-top: 20px;
-}
-
-.carousel .list .item .content button {
-    border: none;
-    background-color: #eee;
-    letter-spacing: 3px;
+    padding: 20px 50px;
+    font-size: 1.5rem;
     font-family: Poppins;
-    font-weight: 500;
+    cursor: pointer;
+    border: 0px;
+    background: transparent;
+    position: relative;
+    margin: 20px;
+    transition: all 0.25s ease;
 }
 
-.carousel .list .item .content button:nth-child(1) {
+.carousel .list .item .content .btn-1 {
+    background: #000;
+    color: #eee;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+
+}
+
+.carousel .list .item .content .btn-2:nth-child(1) {
     background-color: transparent;
     color: #f4efef;
     border: 1px solid #eee;
 }
 
-.carousel .list .item .content button:nth-child(3) {
+.carousel .list .item .content .btn-3:nth-child(3) {
     background-color: transparent;
     color: #f4efef;
     border: 1px solid #eee;
