@@ -90,7 +90,7 @@ header a {
     font-weight: 500;
 }
 
-.carousel .list .item .content button:nth-child(3) {
+.carousel .list .item .content button:nth-child(1) {
     background-color: transparent;
     color: #f4efef;
     border: 1px solid #eee;
