@@ -1,14 +1,11 @@
-#chartSound {
-    width: 100%;
-}
-
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-body {
-    font-family: Roboto, sans-serif;
-}
-
-#chart {
+#chartSound {
     max-width: 650px;
     margin: 35px auto;
+
+    body {
+        font-family: Roboto, sans-serif;
+    }
+
 }
