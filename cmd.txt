@@ -1,0 +1,10 @@
+# start docker
+docker-compose up
+
+# stop docker
+ctl + c
+
+# remove container 
+docker-compose down
+
+

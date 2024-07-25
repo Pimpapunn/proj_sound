@@ -24,13 +24,23 @@ services:
       - ./nodejs:/app
     ports:
       - 3200:3000
-    command: bash -c "npm i && npm i -g nodemon && nodemon server.js"
+    command: sh -c "npm i && npm i -g nodemon && nodemon server.js"
 
-  python:
-    build:
-      context: ./python/
-      dockerfile: Dockerfile
+  gdal:
+    image: osgeo/gdal:ubuntu-small-3.6.3
+    container_name: gdal
+    working_dir: /app
+    depends_on:
+      - postgis
     volumes:
-      - ./python:/app
+      - ./gdal:/app
     ports:
-      - '5100:5000'
+      - "3500:3500"
+    command: |
+      sh -c "
+      apt-get update &&
+      apt-get install -y python3 python3-pip gdal-bin python3-gdal &&
+      pip3 install Flask &&
+      cd /app &&
+      python3 app.py
+      "
