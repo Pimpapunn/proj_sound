@@ -5,109 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <!-- header -->
-    <header>
-        <nav>
-            <a href="">Home</a>
-            <a href="">Contacts</a>
-            <a href="">Info</a>
-        </nav>
-    </header>
-
-    <!-- carousel-->
-    <div class="carousel">
-        <!--list item-->
-        <div class="list">
-            <div class="item">
-                <img src="cover design.jpg">
-                <div class="content">
-                    <div class="title">A study of the spatial and temporal sound landscape of a group of study buildings
-                        in Chiang Mai University</div>
-                    <div class="topic">Internet Of Things (ESP32 Board And Sound Microphone Sensor)</div>
-                    <div class="des">Pimpapun Aiwang</div>
-                    <div class="buttons">
-                        <button class="btn-1">SEE MORE</button>
-                        <button class="btn-2" onclick="openMap()">MAP</button>
-                        <button class="btn-3" onclick="openGraph()">GRAPH</button>
-
-                        <script>
-                            function openMap() {
-                                window.open('http://47.129.50.123:3200/soundwave/map/', '_blank');
-                            }
-
-                            function openGraph() {
-                                window.open('http://47.129.50.123:3200/soundwave/dashboard/', '_blank');
-                            }
-                        </script>
-
-
-                        <Style>
-                            /* btn-1 */
-                            .btn-1:hover {
-                                transform: translate(-12px, -12px);
-                            }
-
-                            .btn-1:hover::before {
-                                transform: translate(12px, 12px);
-                            }
-
-                            .btn-1:hover::after {
-                                transform: translate(6px, 6px);
-                            }
-
-                            /* .btn-1::after,
-                            .btn-1::before {
-                                content: "";
-                                position: absolute;
-                                opacity: 0.3;
-                                border-radius: inherit;
-                                width: 100%;
-                                height: 100%;
-                                z-index: -1;
-                                bottom: 0;
-                                transition: all 0.25s ease;
-                            } */
-
-                            /* btn-2 */
-                            .btn-2:hover {
-                                transform: translate(-12px, -12px);
-                            }
-
-                            .btn-2:hover::before {
-                                transform: translate(12px, 12px);
-                            }
-
-                            .btn-2:hover::after {
-                                transform: translate(6px, 6px);
-                            }
-
-                            /* btn-3 */
-                            .btn-3:hover {
-                                transform: translate(-12px, -12px);
-                            }
-
-                            .btn-3:hover::before {
-                                transform: translate(12px, 12px);
-                            }
-
-                            .btn-3:hover::after {
-                                transform: translate(6px, 6px);
-                            }
-                        </Style>
-                    </div>
-                </div>
-            </div>
+    # Navbar with title and icon
+    # Navbar with icon at start and end
+    <div class="navbar bg-base-100">
+        <div class="flex-none">
+            <button class="btn btn-square btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="inline-block h-5 w-5 stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl">daisyUI</a>
+        </div>
+        <div class="flex-none">
+            <button class="btn btn-square btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="inline-block h-5 w-5 stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z">
+                    </path>
+                </svg>
+            </button>
         </div>
     </div>
-    <Script:src="app.js">
-        </Script:src>
-
-
 </body>
 
 </html>
