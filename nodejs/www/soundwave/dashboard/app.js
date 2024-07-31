@@ -79,7 +79,7 @@ chartsound.render();
 
 
 window.setInterval(function () {
-    axios.get('/api/data').then(r => {
+    axios.get('/sss/api/data').then(r => {
         const sound = r.data.filter((a) => { return a.stationname == '01' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
         const sound1 = r.data.filter((a) => { return a.stationname == '02' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
         const sound2 = r.data.filter((a) => { return a.stationname == '03' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))

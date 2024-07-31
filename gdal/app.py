@@ -27,7 +27,7 @@ try:
         tiffpath = "./tiff"
         shppath = "./shp"
         sql = f'''SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
-                    FROM public.v_parks_sound \
+                    FROM public.b_cmu_sound \
                     WHERE dt7 >= '2024-07-23 08:00:00' \
                     AND dt7 < '2024-07-23 09:00:00' \
                     GROUP BY geom, stationname, lat, lng'''
