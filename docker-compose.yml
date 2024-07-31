@@ -35,7 +35,7 @@ services:
     volumes:
       - ./gdal:/app
     ports:
-      - "3500:3500"
+      - "5400:5400"
     command: |
       sh -c "
       apt-get update &&
