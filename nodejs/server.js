@@ -12,7 +12,7 @@ const pg = new Pool({
 })
 
 
-app.get('/api/data', (req, res) => {
+app.get('/sss/api/data', (req, res) => {
     let sql = `select *,datetime as ts 
                     from "154499".parks_sound
                     order by datetime DESC LIMIT 30`;
@@ -23,7 +23,7 @@ app.get('/api/data', (req, res) => {
     })
 })
 
-app.get('/api/senddata/:stationname/:sound', (req, res) => {
+app.get('/sss/api/senddata/:stationname/:sound', (req, res) => {
     const { stationname, sound } = req.params;
 
     const sql = `insert into "154499".parks_sound(
@@ -39,7 +39,7 @@ app.get('/api/senddata/:stationname/:sound', (req, res) => {
 })
 
 
-app.use('/', express.static('www'))
+app.use('/sss', express.static('www'))
 
 app.listen(3000, () => {
     console.log(`http://localhost:3000`);

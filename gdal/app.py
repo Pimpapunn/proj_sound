@@ -13,16 +13,13 @@ try:
     dbUser = "postgres"
     dbPass = "1234"
 
-    @app.route('/')
-    def hello_world():
-        return jsonify(message='Hello, from python')
 
-    @app.route('/noyna', methods=['POST'])
+    @app.route('/sss/noyna', methods=['POST'])
     def post():
         data = request.json["name"]
         return jsonify(message='Hello, ' + data), 200
 
-    @app.route('/interpolation', methods=['POST'])
+    @app.route('/sss/interpolation', methods=['POST'])
     def getisoline():
         fld = request.json["name"]
         interval = request.json["interval"]
@@ -67,4 +64,4 @@ except ImportError:
     print("GDAL's Python bindings are not installed!")
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=3500, debug=True)
+    app.run(host="0.0.0.0", port=5400, debug=True)
