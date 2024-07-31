@@ -50,7 +50,7 @@ SET default_table_access_method = heap;
 -- Name: parks_sound; Type: TABLE; Schema: 154499; Owner: postgres
 --
 
-CREATE Schema "154499"
+CREATE SCHEMA "154499";
 
 CREATE TABLE "154499".parks_sound (
     stationname text,
