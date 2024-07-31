@@ -14,12 +14,12 @@ try:
     dbPass = "1234"
 
 
-    @app.route('/sss/noyna', methods=['POST'])
+    @app.route('/bds/noyna', methods=['POST'])
     def post():
         data = request.json["name"]
         return jsonify(message='Hello, ' + data), 200
 
-    @app.route('/sss/interpolation', methods=['POST'])
+    @app.route('/bds/interpolation', methods=['POST'])
     def getisoline():
         fld = request.json["name"]
         interval = request.json["interval"]
