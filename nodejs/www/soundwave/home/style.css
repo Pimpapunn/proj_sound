@@ -32,3 +32,12 @@ nav {
     display: flex;
     list-style: none;
 }
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    color: #efefef;
+    text-decoration: none;
+}
