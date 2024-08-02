@@ -12,3 +12,32 @@ a {
     text-decoration: none;
     color: #efefef;
 }
+
+nav {
+    background-color: darkslategray;
+}
+
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-wrapper .logo h3 {
+    color: #efefef;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    color: #efefef;
+    text-decoration: none;
+}
