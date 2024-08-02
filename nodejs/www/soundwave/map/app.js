@@ -16,15 +16,15 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 // axios.get(url).then((i) => {
 
 
-i.data.forEach(e => {
-    console.log(e)
-    L.circleMarker([e.lat, e.lng], {
-        radius: 5, color: "red"
-    }).addTo(map).bindPopup(`apName=${e.apName}
-            <br>status=${e.status}
-            <br>totalUser=${e.totalUser}`);
-});
-})
+//     i.data.forEach(e => {
+//         console.log(e)
+//         L.circleMarker([e.lat, e.lng], {
+//             radius: 5, color: "red"
+//         }).addTo(map).bindPopup(`apName=${e.apName}
+//             <br>status=${e.status}
+//             <br>totalUser=${e.totalUser}`);
+//     });
+// })
 
 const basemap = {
     osm: osm.addTo(map),
