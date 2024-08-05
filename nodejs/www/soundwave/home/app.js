@@ -3,7 +3,7 @@ function toggleHam(x) {
 
     let myMenu = document.getElementById('myMenu');
     if (myMenu.className === 'menu') {
-        myMenu.className + - 'menu-active'
+        myMenu.className + - ' menu-active'
     } else {
         myMenu.className = 'menu';
     }
