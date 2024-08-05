@@ -197,4 +197,37 @@ body {
 .board-img img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item h2:first-child {
+    transition: 0.3s ease;
+}
+
+.grid-item p:nth-child(2) {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    width: fit-content;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+.grid-items h2.title {
+    font-weight: 500;
+    margin: 20px 0;
+    height: 62px;
+    overflow: hidden;
+    transition: 0.3 ease;
+}
+
+.grid-items p:nth-child(4) {
+    height: 90px;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: #fff;
+    transition: 0.3 ease;
 }
