@@ -1,10 +1,10 @@
 function toggleHam(x) {
-    x.classList.toggle("change");
+    x.classList.toggle("change"); // Toggle the "change" class for the hamburger menu
 
     let myMenu = document.getElementById('myMenu');
-    if (myMenu.className === 'menu') {
-        myMenu.className + - ' menu-active'
+    if (myMenu.classList.contains('menu-active')) {
+        myMenu.classList.remove('menu-active');
     } else {
-        myMenu.className = 'menu';
+        myMenu.classList.add('menu-active');
     }
 }
