@@ -23,6 +23,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 60px;
+    position: relative;
 }
 
 .nav-wrapper .logo h1 {
@@ -48,6 +49,7 @@ nav {
 .ham-menu {
     display: inline-block;
     cursor: pointer;
+    position: absolute;
 }
 
 .bar1,
