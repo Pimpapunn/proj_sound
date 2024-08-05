@@ -89,6 +89,12 @@ nav {
     display: block !important;
 }
 
+@media only screen and (min-width: 360px) {
+    .ham-menu {
+        display: none;
+    }
+}
+
 @media only screen and (max-width:360px) {
     .menu {
         display: none;
@@ -107,8 +113,9 @@ nav {
 
 
     .menu li {
-        margin: 2rem 0;
+        margin: 1rem 0;
         padding: 1rem 0.5rem;
+        transition: 0.3s;
     }
 
     .menu li:hover {
