@@ -178,102 +178,64 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover Effects */
+/* :hover */
 .grid-items:hover {
     background: #fff;
-    /* Background color on hover */
 }
 
 .grid-items:hover h2:first-child {
     color: #333;
-    /* Change color of the first <h2> element on hover */
 }
 
-.grid-items:hover p:nth-of-type(2) {
+.grid-items:hover p:nth-child(2) {
     border-bottom: 2px solid #333;
-    /* Add bottom border to the second <p> element on hover */
 }
 
-/* Title Styling */
 .title {
     font-size: 1.2rem;
-    /* Font size for the title */
     margin: 10px 0;
-    /* Margin above and below the title */
     color: #333;
-    /* Text color for the title */
 }
 
-/* Description Styling */
 .description {
     font-size: 1rem;
-    /* Font size for the description */
     color: #666;
-    /* Text color for the description */
 }
 
-/* Image Styling */
 .board-img img {
     width: 100%;
-    /* Make image responsive */
     height: auto;
-    /* Maintain aspect ratio */
     border-radius: 10px;
-    /* Rounded corners for the image */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* Shadow effect */
 }
 
-/* Grid Item Styling */
 .grid-item h2:first-child {
-    transition: color 0.3s ease;
-    /* Smooth transition for color change */
+    transition: 0.3s ease;
 }
 
-/* Grid Item Paragraph Styling */
-.grid-item p:nth-of-type(2) {
+.grid-item p:nth-child(2) {
     color: #fff;
-    /* Default text color */
     border-bottom: 2px solid #fff;
-    /* Bottom border */
     width: fit-content;
-    /* Fit width of the text */
     padding-bottom: 20px;
-    /* Padding below the text */
     margin-top: 10px;
-    /* Margin above the text */
-    transition: border-bottom 0.3s ease;
-    /* Smooth transition for border change */
+    transition: 0.3s ease;
 }
 
-/* Title Styling within Grid Items */
 .grid-items h2.title {
     font-weight: 500;
-    /* Font weight for the title */
     margin: 20px 0;
-    /* Margin above and below the title */
     height: 62px;
-    /* Fixed height to limit overflow */
     overflow: hidden;
-    /* Hide overflow content */
-    transition: color 0.3s ease;
-    /* Smooth transition for color change */
+    transition: 0.3 ease;
 }
 
-/* Description Styling within Grid Items */
-.grid-items p:nth-of-type(4) {
+.grid-items p:nth-child(4) {
     height: 90px;
-    /* Fixed height for description */
     font-size: 1rem;
-    /* Font size for the description */
     line-height: 1.4rem;
-    /* Line height */
     margin-bottom: 30px;
-    /* Margin below the description */
     overflow: hidden;
-    /* Hide overflow content */
     color: #fff;
-
-    transition: color 0.3s ease;
-
+    transition: 0.3 ease;
 }
