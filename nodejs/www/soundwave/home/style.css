@@ -151,58 +151,37 @@ body {
 
 }
 
-/* Container styling */
 .container {
     width: 1200px;
-    /* Fixed width for container */
     margin: 0 auto;
-    /* Center container horizontally */
     padding: 20px;
-    /* Add padding inside the container */
 }
 
-/* Grid layout */
 .grid {
     display: grid;
-    /* Use grid layout */
     grid-template-columns: repeat(2, 1fr);
-    /* Two equal-width columns */
+    /* Create responsive columns */
     gap: 50px;
     /* Space between grid items */
 }
 
-/* Grid item styling */
 .grid-item {
     background: #fff;
-    /* Background color of the grid item */
     border: 1px solid #ddd;
-    /* Border around the grid item */
     border-radius: 8px;
-    /* Rounded corners */
     overflow: hidden;
-    /* Hide overflow content */
     text-decoration: none;
-    /* Remove underline from links */
     color: #333;
-    /* Text color */
     display: flex;
-    /* Flexbox layout */
     flex-direction: column;
-    /* Stack items vertically */
     padding: 20px;
-    /* Padding inside grid items */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Smooth transition effects */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover effects for grid items */
+/* :hover */
 .grid-item:hover {
-    background: #f9f9f9;
-    /* Slightly different background on hover */
-    transform: scale(1.05);
-    /* Slight zoom effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Shadow effect on hover */
+    background: #fff;
+    /* Background color on hover */
 }
 
 .grid-item:hover h2:first-child {
@@ -210,91 +189,56 @@ body {
     /* Change color of the first <h2> element on hover */
 }
 
-.grid-item:hover p:nth-of-type(2) {
+.grid-items:hover p:nth-child(2) {
     border-bottom: 2px solid #333;
-    /* Add bottom border to the second <p> element on hover */
 }
 
-/* Title styling */
 .title {
     font-size: 1.2rem;
-    /* Font size for the title */
     margin: 10px 0;
-    /* Margin above and below the title */
     color: #333;
-    /* Text color for the title */
 }
 
-/* Description styling */
 .description {
     font-size: 1rem;
-    /* Font size for the description */
     color: #666;
-    /* Text color for the description */
 }
 
-/* Image styling */
 .board-img img {
     width: 100%;
-    /* Make image responsive */
     height: auto;
-    /* Maintain aspect ratio */
     border-radius: 10px;
-    /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* Shadow effect */
 }
 
-/* Styling for the first <h2> element inside grid items */
 .grid-item h2:first-child {
-    transition: color 0.3s ease;
-    /* Smooth color transition */
+    transition: 0.3s ease;
 }
 
-/* Styling for the second <p> element inside grid items */
-.grid-item p:nth-of-type(2) {
+.grid-item p:nth-child(2) {
     color: #fff;
-    /* Default text color */
     border-bottom: 2px solid #fff;
-    /* Bottom border */
     width: fit-content;
-    /* Fit width of the text */
     padding-bottom: 20px;
-    /* Padding below the text */
     margin-top: 10px;
-    /* Margin above the text */
-    transition: border-bottom 0.3s ease;
-    /* Smooth border transition */
+    transition: 0.3s ease;
+    border-radius: 10px;
 }
 
-/* Title styling within grid items */
-.grid-item h2.title {
+.grid-items h2.title {
     font-weight: 500;
-    /* Font weight for the title */
     margin: 20px 0;
-    /* Margin above and below the title */
     height: 62px;
-    /* Fixed height to limit overflow */
     overflow: hidden;
-    /* Hide overflow content */
-    transition: color 0.3s ease;
-    /* Smooth color transition */
+    transition: 0.3 ease;
 }
 
-/* Description styling within grid items */
-.grid-item p:nth-of-type(4) {
+.grid-items p:nth-child(4) {
     height: 90px;
-    /* Fixed height for description */
     font-size: 1rem;
-    /* Font size for the description */
     line-height: 1.4rem;
-    /* Line height */
     margin-bottom: 30px;
-    /* Margin below the description */
     overflow: hidden;
-    /* Hide overflow content */
     color: #fff;
-    /* Text color */
-    transition: color 0.3s ease;
-    /* Smooth color transition */
+    transition: 0.3 ease;
 }
