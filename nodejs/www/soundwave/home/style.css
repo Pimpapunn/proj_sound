@@ -161,7 +161,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* Create responsive columns */
-    gap: 30px;
+    gap: 50px;
     /* Space between grid items */
 }
 
