@@ -85,12 +85,8 @@ nav {
     transform: translate(0, -11px) rotate(45deg);
 }
 
-
-
-@media only screen and (min-width: 360px) {
-    .ham-menu {
-        display: none;
-    }
+.menu-active {
+    display: block !important;
 }
 
 @media only screen and (max-width:360px) {
@@ -109,6 +105,7 @@ nav {
         width: 100%;
     }
 
+
     .menu li {
         margin: 1rem 0;
         padding: 1rem 0.5rem;
@@ -117,9 +114,5 @@ nav {
 
     .menu li:hover {
         background-color: #1f3c2c;
-    }
-
-    .menu-active {
-        display: block;
     }
 }
