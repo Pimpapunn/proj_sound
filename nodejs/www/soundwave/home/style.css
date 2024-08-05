@@ -178,9 +178,17 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.grid-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* :hover */
+.grid-items:hover {
+    background: #fff;
+}
+
+.grid-items:hover h2:first-child {
+    color: #333;
+}
+
+.grid-items:hover p:nth-child(2) {
+    border-bottom: 2px solid #333;
 }
 
 .title {
