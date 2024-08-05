@@ -179,14 +179,12 @@ body {
 }
 
 /* :hover */
-.grid-item:hover {
+.grid-items:hover {
     background: #fff;
-    /* Background color on hover */
 }
 
-.grid-item:hover h2:first-child {
+.grid-items:hover h2:first-child {
     color: #333;
-    /* Change color of the first <h2> element on hover */
 }
 
 .grid-items:hover p:nth-child(2) {
