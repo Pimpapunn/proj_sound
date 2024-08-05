@@ -75,6 +75,10 @@ nav {
     transform: translate(0, -11px) rotate(45deg);
 }
 
+.menu-active {
+    display: block !important;
+}
+
 @media oly screen and (max-width:360px) {
     .menu {
         display: none;
