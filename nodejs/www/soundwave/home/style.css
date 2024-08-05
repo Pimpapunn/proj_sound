@@ -123,16 +123,16 @@ nav {
 }
 
 /* Ensure the jumbotron has a background image */
-.jumbotron {
+/* .jumbotron {
     background-image: url('Untitled\ design.jpg');
     /* URL of the background image */
-    background-size: cover;
+/* background-size: cover;
     /* Ensures the image covers the entire background */
-    background-position: center;
-    /* Centers the background image */
-    color: white;
-    /* Example text color for better contrast */
-}
+/* background-position: center; */
+/* Centers the background image */
+/* color: white; */
+/* Example text color for better contrast */
+/* } */
 
 
 .jumbotron::before {
