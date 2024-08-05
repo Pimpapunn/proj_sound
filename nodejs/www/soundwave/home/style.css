@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
-    color: #f5f5f5;
+    color: #333;
+    /* Improved text color for readability */
     margin: 0;
-    font-size: 20px;
+    font-size: 16px;
+    /* Adjusted to a more standard size */
 }
 
 a {
     text-decoration: none;
-    color: #efefef;
+    color: #333;
+    /* Improved link color for readability */
 }
 
 nav {
     background-color: darkslategray;
+    color: #efefef;
 }
-
 
 .nav-wrapper {
     display: flex;
@@ -24,15 +27,23 @@ nav {
     align-items: center;
     height: 60px;
     position: relative;
+    padding: 0 20px;
+    /* Adjusted padding for better alignment */
 }
 
 .nav-wrapper .logo h1 {
     color: #efefef;
+    margin: 0;
+    /* Remove default margin */
 }
 
 .menu {
     display: flex;
     list-style: none;
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
 }
 
 .menu li {
@@ -44,12 +55,13 @@ nav {
     text-decoration: none;
 }
 
-
-/* Hamburgur Menu css */
+/* Hamburger Menu CSS */
 .ham-menu {
-    display: inline-block;
+    display: none;
+    /* Hide by default */
     cursor: pointer;
-    position: absolute;
+    position: relative;
+    /* Relative positioning to ensure it's in the correct place */
 }
 
 .bar1,
@@ -81,12 +93,35 @@ nav {
     display: block !important;
 }
 
-@media oly screen and (max-width:360px) {
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
     .menu {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: darkslategray;
+        width: 100%;
+    }
+
+    .menu-active {
+        display: flex;
     }
 
     .nav-wrapper {
-        padding: 0 1rem;
+        padding: 0 10px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .ham-menu {
+        display: block;
+        /* Show hamburger menu on small screens */
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .menu {
+        /* Additional styles for very small screens if needed */
     }
 }
