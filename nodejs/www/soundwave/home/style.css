@@ -111,4 +111,8 @@ nav {
         padding-top: 1rem;
         border-top: 1px solid #ccc;
     }
+
+    .menu li:hover {
+        background-color: #333;
+    }
 }
