@@ -167,54 +167,34 @@ body {
 
 .grid-item {
     background: #fff;
-    /* Background color for items */
     border: 1px solid #ddd;
-    /* Border color */
     border-radius: 8px;
-    /* Rounded corners */
     overflow: hidden;
-    /* Hide overflow content */
     text-decoration: none;
-    /* Remove underline from links */
     color: #333;
-    /* Text color */
     display: flex;
     flex-direction: column;
-    /* Arrange items vertically */
     padding: 20px;
-    /* Add padding inside items */
     transition: transform 0.3s, box-shadow 0.3s;
-    /* Smooth transition for hover effects */
 }
 
 .grid-item:hover {
     transform: scale(1.03);
-    /* Slight zoom effect on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Add shadow effect */
 }
 
 .title {
     font-size: 1.2rem;
-    /* Font size for title */
     margin: 10px 0;
-    /* Margin above and below the title */
     color: #333;
-    /* Color for title */
 }
 
 .description {
     font-size: 1rem;
-    /* Font size for description */
     color: #666;
-    /* Gray color for description */
 }
 
 .board-img img {
     width: 100%;
-    /* Make image responsive */
     height: auto;
-    /* Maintain aspect ratio */
-    border-top: 1px solid #ddd;
-    /* Border above image */
 }
