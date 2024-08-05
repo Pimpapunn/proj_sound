@@ -144,7 +144,7 @@ nav {
     z-index: -1;
 }
 
-.container {
+/* .container {
     width: 500px;
     margin: 30px;
 }
@@ -153,4 +153,4 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
-}
+} */
