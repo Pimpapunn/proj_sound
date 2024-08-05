@@ -87,7 +87,7 @@ nav {
     display: block !important;
 }
 
-@media oly screen and (max-width:360px) {
+@media only screen and (max-width:360px) {
     .menu {
         display: none;
     }
