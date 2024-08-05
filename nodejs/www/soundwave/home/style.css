@@ -142,9 +142,3 @@ nav {
     background-color: #ffffff;
     z-index: -1;
 }
-
-
-.jumbotron p {
-    font-weight: bold;
-    /* Makes the text bold */
-}
