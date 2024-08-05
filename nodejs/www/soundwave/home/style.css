@@ -144,9 +144,16 @@ nav {
     z-index: -1;
 }
 
+
+body {
+    width: 100%;
+    height: 100vh;
+
+}
+
 .container {
-    width: 500px;
-    margin: 30px;
+    width: 1200px;
+    margin: 50px auto;
 }
 
 .grid {
@@ -166,6 +173,11 @@ nav {
 }
 
 .border-img {
+    width: 100%;
+    height: 180px;
+}
+
+.border-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
