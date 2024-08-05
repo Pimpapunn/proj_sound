@@ -86,13 +86,13 @@ nav {
     transform: translate(0, -11px) rotate(45deg);
 }
 
-@media only screen and (min-width:415px) {
+@media only screen and (min-width:416px) {
     .ham-menu {
         display: none;
     }
 }
 
-@media only screen and (max-width:360px) {
+@media only screen and (max-width:415px) {
     .menu {
         display: none;
     }
