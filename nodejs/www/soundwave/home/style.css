@@ -204,16 +204,17 @@ body {
 
 .board-img img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.grid-item h2:first-child {
+.grid-items h2:first-child {
     transition: 0.3s ease;
 }
 
-.grid-item p:nth-child(2) {
+.grid-items p:nth-child(2) {
     color: #fff;
     border-bottom: 2px solid #fff;
     width: fit-content;
