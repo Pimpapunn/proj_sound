@@ -139,19 +139,12 @@ nav {
 
 .jumbotron {
     background-image: url('Untitled\ design.jpg');
-    /* Replace with the path to your background image */
     background-size: cover;
-    /* Ensures the image covers the entire div */
     background-position: center;
-    /* Centers the image */
     color: white;
-    /* Sets text color for better contrast */
     padding: 2rem;
-    /* Adds padding inside the div */
     border-radius: 0.3rem;
-    /* Optional: rounds the corners */
     text-align: center;
-    /* Centers text within the div */
 }
 
 .jumbotron::before {
@@ -263,7 +256,7 @@ body {
 }
 
 .grid-items:hover p:nth-child(4) {
-    color: #777;
+    color: #2a2a51;
 }
 
 
