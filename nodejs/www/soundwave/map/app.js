@@ -1,4 +1,4 @@
-
+#map
 const map = L.map('map').setView([18.800938160747965, 98.95212346404927], 18);
 
 
@@ -21,3 +21,14 @@ const basemap = {
 }
 const overlay = {}
 L.control.layers(basemap, overlay).addTo(map)
+
+function toggleHam(x) {
+    x.classList.toggle("change");
+
+    let myMenu = document.getElementById('myMenu');
+    if (myMenu.className === 'menu') {
+        myMenu.className += ' menu-active'
+    } else {
+        myMenu.className = 'menu';
+    }
+}
