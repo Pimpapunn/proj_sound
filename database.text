@@ -1,0 +1,440 @@
+--Monday
+1. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-05 08:00:00' \
+                    AND dt7 < '2024-08-05 09:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+2. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-05 09:00:00' \
+                    AND dt7 < '2024-08-05 10:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+3. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-05 10:00:00' \
+                    AND dt7 < '2024-08-05 11:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+4. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-05 11:00:00' \
+                    AND dt7 < '2024-08-05 12:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+5. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-05 12:00:00' \
+                    AND dt7 < '2024-08-05 13:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+6. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-05 13:00:00' \
+                    AND dt7 < '2024-08-05 14:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+7. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-05 14:00:00' \
+                    AND dt7 < '2024-08-05 15:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+8. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-05 15:00:00' \
+                    AND dt7 < '2024-08-05 16:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+10. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-05 16:00:00' \
+                    AND dt7 < '2024-08-05 17:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+--Tuesday
+1. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-23 08:00:00' \
+                    AND dt7 < '2024-07-23 09:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+2. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-23 09:00:00' \
+                    AND dt7 < '2024-07-23 10:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+3. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-23 10:00:00' \
+                    AND dt7 < '2024-07-23 11:00:00' \
+                    OR dt7 >= '2024-08-06 10:00:00' \
+                    AND dt7 < '2024-08-06 11:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+4. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-23 11:00:00' \
+                    AND dt7 < '2024-07-23 12:00:00' \
+                    OR dt7 >= '2024-08-06 11:00:00' \
+                    AND dt7 < '2024-08-06 12:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+5. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-23 12:00:00' \
+                    AND dt7 < '2024-07-23 13:00:00' \
+                    OR dt7 >= '2024-08-06 12:00:00' \
+                    AND dt7 < '2024-08-06 13:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+6. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-23 13:00:00' \
+                    AND dt7 < '2024-07-23 14:00:00' \
+                    OR dt7 >= '2024-08-06 13:00:00' \
+                    AND dt7 < '2024-08-06 14:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+7. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-23 14:00:00' \
+                    AND dt7 < '2024-07-23 15:00:00' \
+                    OR dt7 >= '2024-08-06 14:00:00' \
+                    AND dt7 < '2024-08-06 15:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+8. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-23 15:00:00' \
+                    AND dt7 < '2024-07-23 16:00:00' \
+                    OR dt7 >= '2024-08-06 15:00:00' \
+                    AND dt7 < '2024-08-06 16:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+10. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-23 16:00:00' \
+                    AND dt7 < '2024-07-23 17:00:00' \
+                    OR dt7 >= '2024-08-06 16:00:00' \
+                    AND dt7 < '2024-08-06 17:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+--Wednesday
+1. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-24 08:00:00' \
+                    AND dt7 < '2024-07-24 09:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+2. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-24 09:00:00' \
+                    AND dt7 < '2024-07-24 10:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+3. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-24 10:00:00' \
+                    AND dt7 < '2024-07-24 11:00:00' \
+                    OR dt7 >= '2024-08-07 10:00:00' \
+                    AND dt7 < '2024-08-07 11:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+4. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-24 11:00:00' \
+                    AND dt7 < '2024-07-24 12:00:00' \
+                    OR dt7 >= '2024-08-07 11:00:00' \
+                    AND dt7 < '2024-08-07 12:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+5. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-24 12:00:00' \
+                    AND dt7 < '2024-07-24 13:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+6. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-24 13:00:00' \
+                    AND dt7 < '2024-07-24 14:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+7. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-24 14:00:00' \
+                    AND dt7 < '2024-07-24 15:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+8. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-24 15:00:00' \
+                    AND dt7 < '2024-07-24 16:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+10. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-24 16:00:00' \
+                    AND dt7 < '2024-07-24 17:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+--Thursday
+1. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-18 08:00:00' \
+                    AND dt7 < '2024-07-18 09:00:00' \
+                    OR dt7 >= '2024-07-25 08:00:00' \
+                    AND dt7 < '2024-07-25 09:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+2. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-18 09:00:00' \
+                    AND dt7 < '2024-07-18 10:00:00' \
+                    OR dt7 >= '2024-07-25 09:00:00' \
+                    AND dt7 < '2024-07-25 10:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+3. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-18 10:00:00' \
+                    AND dt7 < '2024-07-18 11:00:00' \
+                    OR dt7 >= '2024-07-25 10:00:00' \
+                    AND dt7 < '2024-07-25 11:00:00' \
+                    OR dt7 >= '2024-08-08 10:00:00' \
+                    AND dt7 < '2024-08-08 11:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+4. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-18 11:00:00' \
+                    AND dt7 < '2024-07-18 12:00:00' \
+                    OR dt7 >= '2024-07-25 11:00:00' \
+                    AND dt7 < '2024-07-25 12:00:00' \
+                    OR dt7 >= '2024-08-08 11:00:00' \
+                    AND dt7 < '2024-08-08 12:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+5. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-18 12:00:00' \
+                    AND dt7 < '2024-07-18 13:00:00' \
+                     OR dt7 >= '2024-07-25 12:00:00' \
+                    AND dt7 < '2024-07-25 13:00:00' \
+                    OR dt7 >= '2024-08-08 12:00:00' \
+                    AND dt7 < '2024-08-08 13:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+6. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-18 13:00:00' \
+                    AND dt7 < '2024-07-18 14:00:00' \
+                    OR dt7 >= '2024-07-25 13:00:00' \
+                    AND dt7 < '2024-07-25 14:00:00' \
+                    OR dt7 >= '2024-08-08 13:00:00' \
+                    AND dt7 < '2024-08-08 14:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+7. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-18 14:00:00' \
+                    AND dt7 < '2024-07-18 15:00:00' \
+                    OR dt7 >= '2024-07-25 14:00:00' \
+                    AND dt7 < '2024-07-25 15:00:00' \
+                    OR dt7 >= '2024-08-08 14:00:00' \
+                    AND dt7 < '2024-08-08 15:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+8. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-18 15:00:00' \
+                    AND dt7 < '2024-07-18 16:00:00' \
+                    OR dt7 >= '2024-07-25 15:00:00' \
+                    AND dt7 < '2024-07-25 16:00:00' \
+                    OR dt7 >= '2024-08-08 15:00:00' \
+                    AND dt7 < '2024-08-08 16:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+10. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-18 16:00:00' \
+                    AND dt7 < '2024-07-18 17:00:00' \
+                    OR dt7 >= '2024-07-25 16:00:00' \
+                    AND dt7 < '2024-07-25 17:00:00' \
+                    OR dt7 >= '2024-08-08 16:00:00' \
+                    AND dt7 < '2024-08-08 17:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+--Friday
+1. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-19 08:00:00' \
+                    AND dt7 < '2024-07-19 09:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+2. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-19 09:00:00' \
+                    AND dt7 < '2024-07-19 10:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+3. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-19 10:00:00' \
+                    AND dt7 < '2024-07-19 11:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+4. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-19 11:00:00' \
+                    AND dt7 < '2024-07-19 12:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+5. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-19 12:00:00' \
+                    AND dt7 < '2024-07-19 13:00:00' \
+                    OR dt7 >= '2024-08-09 12:00:00' \
+                    AND dt7 < '2024-08-09 13:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+6. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-19 13:00:00' \
+                    AND dt7 < '2024-07-19 14:00:00' \
+                    OR dt7 >= '2024-08-09 13:00:00' \
+                    AND dt7 < '2024-08-09 14:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+7. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-19 14:00:00' \
+                    AND dt7 < '2024-07-19 15:00:00' \
+                    OR dt7 >= '2024-08-09 14:00:00' \
+                    AND dt7 < '2024-08-09 15:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+8. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-19 15:00:00' \
+                    AND dt7 < '2024-07-19 16:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+10. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-07-19 16:00:00' \
+                    AND dt7 < '2024-07-19 17:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+--Saturday
+1. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-10 08:00:00' \
+                    AND dt7 < '2024-08-10 09:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+2. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-10 09:00:00' \
+                    AND dt7 < '2024-08-10 10:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+3. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-10 10:00:00' \
+                    AND dt7 < '2024-08-10 11:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+4. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-10 11:00:00' \
+                    AND dt7 < '2024-08-10 12:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+5. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-10 12:00:00' \
+                    AND dt7 < '2024-08-10 13:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+6. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-10 13:00:00' \
+                    AND dt7 < '2024-08-10 14:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+7. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-10 14:00:00' \
+                    AND dt7 < '2024-08-10 15:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+8. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-10 15:00:00' \
+                    AND dt7 < '2024-08-10 16:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+10. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-10 16:00:00' \
+                    AND dt7 < '2024-08-110 17:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+-Sunday
+1. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-11 08:00:00' \
+                    AND dt7 < '2024-08-11 09:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+2. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-11 09:00:00' \
+                    AND dt7 < '2024-08-11 10:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+3. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-11 10:00:00' \
+                    AND dt7 < '2024-08-11 11:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+4. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-11 11:00:00' \
+                    AND dt7 < '2024-08-11 12:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+5. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-11 12:00:00' \
+                    AND dt7 < '2024-08-11 13:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+6. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-11 13:00:00' \
+                    AND dt7 < '2024-08-11 14:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+7. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-11 14:00:00' \
+                    AND dt7 < '2024-08-11 15:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+8. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-11 15:00:00' \
+                    AND dt7 < '2024-08-11 16:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
+
+10. SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
+                    FROM public.b_cmu_sound \
+                    WHERE dt7 >= '2024-08-11 16:00:00' \
+                    AND dt7 < '2024-08-11 17:00:00' \
+                    GROUP BY geom, stationname, lat, lng'''
