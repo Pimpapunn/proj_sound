@@ -9,18 +9,6 @@ body {
 
 }
 
-@font-face {
-    font-family: 'Melo Regular';
-    src: local('Melo Regular');
-}
-
-/* body {
-    font-family: 'Melo Regular';
-    font-size: 16px;
-    background-color: #000000;
-} */
-
-
 * {
     margin: 0;
     padding: 0;
