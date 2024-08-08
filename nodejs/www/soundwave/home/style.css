@@ -233,18 +233,13 @@ body {
     transition: .3s ease;
 }
 
-
-
-
-
-
 /* hover */
 .grid-items:hover {
     background: #fff;
 }
 
 .grid-items:hover h2:first-child {
-    color: #333;
+    color: #000000;
 }
 
 .grid-items:hover p:nth-child(2) {
@@ -252,11 +247,11 @@ body {
 }
 
 .grid-items:hover h2.title {
-    color: #333;
+    color: #000000;
 }
 
 .grid-items:hover p:nth-child(4) {
-    color: #989898;
+    color: #000000;
 }
 
 
