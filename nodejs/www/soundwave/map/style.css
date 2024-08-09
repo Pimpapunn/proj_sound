@@ -125,3 +125,9 @@ nav {
         background-color: #0b1b12;
     }
 }
+
+/* dropdown */
+.custom-select {
+    width: 100%;
+    /* หรือกำหนดขนาดตามต้องการ เช่น 300px */
+}
