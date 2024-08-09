@@ -15,6 +15,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-select {
+            width: 100%;
+            /* หรือกำหนดขนาดตามต้องการ เช่น 300px */
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -56,33 +63,39 @@
                 <div class="card">
                     <div class="card-body">
                         <h3>Select During Time</h3>
-                        <select class="form-select w-100" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">Monday</option>
-                            <option value="2">Tuesday</option>
-                            <option value="3">Wednesday</option>
-                            <option value="4">Thursday</option>
-                            <option value="5">Friday</option>
-                            <option value="6">Saturday</option>
-                            <option value="7">Sunday</option>
-                        </select>
+                        <form>
+                            <select class="form-select w-100" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">Monday</option>
+                                <option value="2">Tuesday</option>
+                                <option value="3">Wednesday</option>
+                                <option value="4">Thursday</option>
+                                <option value="5">Friday</option>
+                                <option value="6">Saturday</option>
+                                <option value="7">Sunday</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">Submit Selection</button>
+                        </form>
                     </div>
                 </div>
                 <div class="card mt-3">
                     <div class="card-body">
                         <h3>Time</h3>
-                        <select class="form-select w-100" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">8.00-9.00</option>
-                            <option value="2">9.00-10.00</option>
-                            <option value="3">10.00-11.00</option>
-                            <option value="4">11.00-12.00</option>
-                            <option value="5">12.00-13.00</option>
-                            <option value="6">13.00-14.00</option>
-                            <option value="7">14.00-15.00</option>
-                            <option value="8">15.00-16.00</option>
-                            <option value="9">16.00-17.00</option>
-                        </select>
+                        <form>
+                            <select class="form-select w-100" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">8.00-9.00</option>
+                                <option value="2">9.00-10.00</option>
+                                <option value="3">10.00-11.00</option>
+                                <option value="4">11.00-12.00</option>
+                                <option value="5">12.00-13.00</option>
+                                <option value="6">13.00-14.00</option>
+                                <option value="7">14.00-15.00</option>
+                                <option value="8">15.00-16.00</option>
+                                <option value="9">16.00-17.00</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">Submit Time</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -96,6 +109,7 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="app.js"></script>
 
 </html>
