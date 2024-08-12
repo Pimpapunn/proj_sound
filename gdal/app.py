@@ -28,11 +28,11 @@ try:
         shppath = "./shp"
         sql = f'''SELECT geom, stationname, lat, lng, AVG(sound_level) AS savg \
                     FROM public.b_cmu_sound \
-                    WHERE dt7 >= '2024-08-05 08:00:00' \
-                    AND dt7 < '2024-08-05 09:00:00' \
+                    WHERE dt7 >= '2024-07-23 08:00:00' \
+                    AND dt7 < '2024-07-23 09:00:00' \
                     GROUP BY geom, stationname, lat, lng'''
         print(sql)
-        stat_shp = f'''stat_shpMon01.shp'''
+        stat_shp = f'''stat_shp.shp'''
         cmd = f'''ogr2ogr -overwrite -f "ESRI Shapefile" {stat_shp} PG:"host={dbServer} user={dbUser} dbname={dbName} password={dbPass}" -sql "{sql}"'''
         os.system(cmd)
         print("shp created")
