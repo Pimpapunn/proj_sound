@@ -2,7 +2,7 @@ POST http://localhost:3500/noyna HTTP/1.1
 content-type: application/json
 
 {
-    "name": "nayna"
+    "name": "noyna"
 }
 
 
