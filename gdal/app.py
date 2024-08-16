@@ -31,7 +31,7 @@ try:
         fld = 'savg'
         tiffpath = "./tiff"
         shppath = "./shp"
-        sql = f'''SELECT geom, stationname, lat, lng, correction_sound_level AS savg \
+        sql = f'''SELECT geom, stationname, lat, lng, AVG(correction_sound_level) AS savg\
                     FROM public.sound_correction \
                     WHERE LOWER(TO_CHAR(dt7, 'FMDay')) = '{dayName}'\
                     AND TO_CHAR(dt7, 'HH24:MI') BETWEEN '{timeStart}:00' AND '{timeEnd}:00' \
