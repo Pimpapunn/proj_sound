@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h3>My website</h3>
+                </div>
+                <ul class="menu" id="myMenu">
+                    <li><a href="#"
+                            onclick="window.location.href='https://geodev.fun/sss/soundwave/home/#'; return false;">Home</a>
+                    </li>
+                    <li><a href="#"
+                            onclick="window.location.href='https://geodev.fun/sss/soundwave/about/#'; return false;">About</a>
+                    </li>
+                    <li><a href="#"
+                            onclick="window.location.href='https://geodev.fun/sss/soundwave/contact/#'; return false;">Contact</a>
+                    </li>
+                </ul>
+                <div class="ham-menu" onclick="toggleHam(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="chartSound"></div><br />
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./app.js"></script>
+
+</html>

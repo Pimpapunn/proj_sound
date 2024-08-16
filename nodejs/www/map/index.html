@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-select {
+            width: 100%;
+            /* หรือกำหนดขนาดตามต้องการ เช่น 300px */
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h3>My website</h3>
+                </div>
+
+                <ul class="menu" id="myMenu">
+                    <li><a href="#"
+                            onclick="window.location.href='https://geodev.fun/sss/soundwave/home/#'; return false;">Home</a>
+                    </li>
+                    <li><a href="#"
+                            onclick="window.location.href='https://geodev.fun/sss/soundwave/about/#'; return false;">About</a>
+                    </li>
+                    <li><a href="#"
+                            onclick="window.location.href='https://geodev.fun/sss/soundwave/contact/#'; return false;">Contact</a>
+                    </li>
+                </ul>
+                <div class="ham-menu" onclick="toggleHam(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="card" id="map">
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Select During Time</h3>
+                        <div>
+                            <!-- Dropdown สำหรับ "Select During Time" -->
+                            <div class="mb-3">
+                                <select class="form-select w-100" id="dayName" aria-label="Select Day">
+                                    <option selected>Open this select menu</option>
+                                    <option value="monday">Monday</option>
+                                    <option value="tuesday">Tuesday</option>
+                                    <option value="wednesday">Wednesday</option>
+                                    <option value="thursday">Thursday</option>
+                                    <option value="friday">Friday</option>
+                                    <option value="saturday">Saturday</option>
+                                    <option value="sunday">Sunday</option>
+                                </select>
+                            </div>
+                            <!-- Dropdown สำหรับ "Time" -->
+                            <div class="mb-3">
+                                <h3>Time</h3>
+                                <select class="form-select w-100" id="time" aria-label="Select Time">
+                                    <option selected>Open this select menu</option>
+                                    <option value="08_09">8.00-9.00</option>
+                                    <option value="09_10">9.00-10.00</option>
+                                    <option value="10_11">10.00-11.00</option>
+                                    <option value="11_12">11.00-12.00</option>
+                                    <option value="12_13">12.00-13.00</option>
+                                    <option value="13_14">13.00-14.00</option>
+                                    <option value="14_15">14.00-15.00</option>
+                                    <option value="15_16">15.00-16.00</option>
+                                    <option value="16_17">16.00-17.00</option>
+                                </select>
+                            </div>
+                            <!-- <div class="mb-3">
+                                <h3>Position</h3>
+                                <select class="form-select w-100" aria-label="Select Time">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
+                                    <option value="6">06</option>
+                                    <option value="7">07</option>
+                                    <option value="8">08</option>
+                                    <option value="9">09</option>
+                                    <option value="9">10</option>
+
+                                </select>
+                            </div> -->
+                            <!-- ปุ่มประมวลผล -->
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary" onclick="getData()">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+
+</html>

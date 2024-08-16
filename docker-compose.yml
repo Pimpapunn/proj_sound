@@ -1,7 +1,7 @@
-version: '3.3'
 services:
   postgis:
     image: postgis/postgis
+    container_name: sss_postgis
     restart: always
     environment:
       - POSTGRES_USER=postgres
@@ -14,12 +14,13 @@ services:
 
   nodejs:
     image: node
+    container_name: sss_nodejs
     working_dir: /app
     restart: always
     depends_on:
       - postgis
-    environment:
-      - NODE_ENV=production
+    # environment:
+    #   - NODE_ENV=production
     volumes:
       - ./nodejs:/app
     ports:
@@ -28,7 +29,7 @@ services:
 
   gdal:
     image: osgeo/gdal:ubuntu-small-3.6.3
-    container_name: gdal
+    container_name: sss_gdal
     working_dir: /app
     depends_on:
       - postgis
@@ -38,9 +39,9 @@ services:
       - "5400:5400"
     command: |
       sh -c "
-      apt-get update &&
+      apt-get update && 
       apt-get install -y python3 python3-pip gdal-bin python3-gdal &&
-      pip3 install Flask &&
+      pip3 install Flask && pip3 install -U flask-cors
       cd /app &&
       python3 app.py
       "

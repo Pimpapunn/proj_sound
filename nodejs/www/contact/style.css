@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: Poppins;
+    background-color: #1c2e38;
+    color: #f5f5f5;
+    margin: 0;
+    font-size: 16px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+    color: #efefef;
+}
+
+nav {
+    background-color: rgb(0, 0, 0);
+}
+
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.nav-wrapper .logo h3 {
+    color: #efefef;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.menu li a {
+    color: #efefef;
+    text-decoration: none;
+}
+
+
+/* Hamburgur Menu css */
+.ham-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #f0eaea;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+@media only screen and (min-width:416px) {
+    .ham-menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:415px) {
+    .menu {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-wrapper {
+        padding: 1rem;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-active {
+        display: block;
+    }
+
+    .menu li {
+        margin: 1rem 0;
+        padding: 1rem 0.5rem;
+        transition: 0.3s;
+    }
+
+    .menu li:hover {
+        background-color: #0b1b12;
+    }
+}

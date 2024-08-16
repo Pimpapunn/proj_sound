@@ -1,4 +1,4 @@
-POST http://localhost:5400/noyna HTTP/1.1
+POST http://localhost:5400/bds/noyna HTTP/1.1
 content-type: application/json
 
 {
@@ -7,11 +7,12 @@ content-type: application/json
 
 
 ###
-POST http://localhost:5400/interpolation HTTP/1.1
+POST http://localhost:5400/bds/interpolation HTTP/1.1
 content-type: application/json
 
 {
-    "name": "savg",
-    "interval": 20
+    "dayName": "monday",
+    "timeStart": "09",
+    "timeEnd": "10"
 }
 
