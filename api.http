@@ -1,4 +1,4 @@
-POST http://localhost:5400/bds/noyna HTTP/1.1
+POST http://localhost:5400/sss/bds/noyna HTTP/1.1
 content-type: application/json
 
 {
@@ -7,7 +7,7 @@ content-type: application/json
 
 
 ###
-POST http://localhost:5400/bds/interpolation HTTP/1.1
+POST http://localhost:5400/sss/bds/interpolation HTTP/1.1
 content-type: application/json
 
 {
