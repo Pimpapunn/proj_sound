@@ -11,8 +11,8 @@ POST http://localhost:5400/sss/bds/interpolation HTTP/1.1
 content-type: application/json
 
 {
-    "dayName": "monday",
-    "timeStart": "09",
-    "timeEnd": "10"
+    "dayName": "wednesday",
+    "timeStart": "08",
+    "timeEnd": "09"
 }
 
