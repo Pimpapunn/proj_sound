@@ -16,12 +16,12 @@ try:
     dbUser = "postgres"
     dbPass = "1234"
 
-    @app.route('/bds/noyna', methods=['POST'])
+    @app.route('/sss/bds/noyna', methods=['POST'])
     def post():
         data = request.json["name"]
         return jsonify(message='Hello, ' + data), 200
 
-    @app.route('/bds/interpolation', methods=['POST'])
+    @app.route('/sss/bds/interpolation', methods=['POST'])
     def getisoline():
         dayName = request.json["dayName"]
         timeStart = request.json["timeStart"]
