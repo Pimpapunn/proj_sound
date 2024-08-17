@@ -39,7 +39,7 @@ function getData() {
     let timeStart = timeArr[0];
     let timeEnd = timeArr[0];
 
-    fetch('http://localhost:5400/bds/interpolation', {
+    fetch('http://localhost:5400/sss/bds/interpolation', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
