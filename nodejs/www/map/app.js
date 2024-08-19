@@ -45,7 +45,7 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
         }
     });
 
-    const soundmap = `/output/idw_${dayName}_${timeStart}${timeEnd}.tif`;
+    const soundmap = `/sss/output/idw_${dayName}_${timeStart}${timeEnd}.tif`;
     // console.log(soundmap);
 
     // const windSpeedUrl = soundmap;
@@ -153,8 +153,8 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
 }
 
 
-const server = "http://localhost:5400/bds/interpolation"
-// const server = "/bds/interpolation"
+// const server = "http://localhost:5400/bds/interpolation"
+const server = "https://geodev.fun/bds/interpolation"
 
 function getData() {
     let dayName = document.getElementById("dayName").value
