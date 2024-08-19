@@ -79,8 +79,7 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
         document.getElementById("displayMin").value = min
         document.getElementById("displayMax").value = max
     }, 1000)
-    console.log("Min value:", min);
-    console.log("Max value:", max);
+
 
 
     // VECTOR ARROW EG
