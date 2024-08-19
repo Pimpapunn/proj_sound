@@ -23,6 +23,7 @@ services:
     #   - NODE_ENV=production
     volumes:
       - ./nodejs:/app
+      - ./gdal/output:/app/output
     ports:
       - 3200:3000
     command: sh -c "npm i && npm i -g nodemon && nodemon server.js"
@@ -36,12 +37,12 @@ services:
     volumes:
       - ./gdal:/app
     ports:
-      - "5400:5400"
+      - 5400:5400
     command: |
       sh -c "
       apt-get update && 
       apt-get install -y python3 python3-pip gdal-bin python3-gdal &&
-      pip3 install Flask && pip3 install -U flask-cors
+      pip3 install Flask && pip3 install -U flask-cors && pip3 install rasterio
       cd /app &&
       python3 app.py
       "

@@ -38,8 +38,8 @@ app.get('/api/senddata/:stationname/:sound', (req, res) => {
 
 })
 
-
-app.use('/', express.static('www'))
+app.use("/output", express.static('output'))
+app.use("/", express.static('www'))
 
 app.listen(3000, () => {
     console.log(`http://localhost:3000`);

@@ -5,17 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .custom-select {
             width: 100%;
@@ -117,20 +110,94 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <form>
+                            <p>
+                                <label>displayMin:
+                                    <input class="form-control" type="number" id="displayMin" />
+                                </label>
+                                <label>displayMax:
+                                    <input class="form-control" type="number" id="displayMax" />
+                                </label>
+                            </p>
+                            <p>
+                                <label>clampMin:
+                                    <input class="form-check-input" type="checkbox" id="clampLow" />
+                                </label>
+                                <label>clampMax:
+                                    <input class="form-check-input" type="checkbox" id="clampHigh" />
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    colorScale:
+                                    <select class="form-select" id="colorScale">
+                                        <option>viridis</option>
+                                        <option>inferno</option>
+                                        <option>turbo</option>
+                                        <option>rainbow</option>
+                                        <option>jet</option>
+                                        <option>hsv</option>
+                                        <option>hot</option>
+                                        <option>cool</option>
+                                        <option>spring</option>
+                                        <option>summer</option>
+                                        <option>winter</option>
+                                        <option>autumn</option>
+                                        <option>bone</option>
+                                        <option>copper</option>
+                                        <option>greys</option>
+                                        <option>yignbu</option>
+                                        <option>greens</option>
+                                        <option>yiorrd</option>
+                                        <option>bluered</option>
+                                        <option>rdbu</option>
+                                        <option>picnic</option>
+                                        <option>portland</option>
+                                        <option>blackbody</option>
+                                        <option>earth</option>
+                                        <option>electric</option>
+                                        <option>magma</option>
+                                        <option>plasma</option>
+                                    </select>
+                                </label>
+                            </p>
+                            <p>
+                                <button class="btn btn-dark" id="getBounds">Zoom to bounds</button>
+                                <!-- <button class="btn btn-dark" id="getColorbarOptions">Log getColorbarOptions</button> -->
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
     </div>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/geotiff@1.0.0-beta.7/dist/geotiff.bundle.js"></script>
+<script src="https://unpkg.com/plotty@0.4.4/dist/plotty.min.js"></script>
+
+<script src="../dist/leaflet-geotiff.js"></script>
+<script src="../dist/leaflet-geotiff-plotty.js"></script>
+<script src="../dist/leaflet-geotiff-vector-arrows.js"></script>
+
 <script src="app.js"></script>
 
 </html>

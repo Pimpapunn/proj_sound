@@ -16,12 +16,12 @@ try:
     dbUser = "postgres"
     dbPass = "1234"
 
-    @app.route('/sss/bds/noyna', methods=['POST'])
+    @app.route('/bds/noyna', methods=['POST'])
     def post():
         data = request.json["name"]
         return jsonify(message='Hello, ' + data), 200
 
-    @app.route('/sss/bds/interpolation', methods=['POST'])
+    @app.route('/bds/interpolation', methods=['POST'])
     def getisoline():
         dayName = request.json["dayName"]
         timeStart = request.json["timeStart"]
@@ -31,7 +31,7 @@ try:
         fld = 'savg'
         tiffpath = "./tiff"
         shppath = "./shp"
-        sql = f'''SELECT geom, stationname, lat, lng, correction_sound_level AS savg \
+        sql = f'''SELECT geom, stationname, lat, lng, avg(correction_sound_level) AS savg \
                     FROM public.sound_correction \
                     WHERE LOWER(TO_CHAR(dt7, 'FMDay')) = '{dayName}'\
                     AND TO_CHAR(dt7, 'HH24:MI') BETWEEN '{timeStart}:00' AND '{timeEnd}:00' \
@@ -51,7 +51,14 @@ try:
         -zfield "{fld}" \
         {stat_shp} {output_raster}'''
         os.system(cmd)
-        print("idw created")
+        
+        # output_raster_fix = os.path.join(os.getcwd(), 'output', f'idw_fixed.tif')
+        # cmd = f'''gdal_grid -a invdist:power=2:max_points=15:min_points=3 \
+        # -outsize 100 100 \
+        # -of GTiff \
+        # -zfield "{fld}" \
+        # {stat_shp} {output_raster_fix}'''
+        # os.system(cmd)
 
         interval = 40
         output_geojson_filename = f'output/idw_{dayName}_{timeStart}{timeEnd}.geojson'
