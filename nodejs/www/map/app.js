@@ -62,9 +62,29 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
     }).addTo(rasterSound);
 
     // Wait for getMinMax() to resolve
+    // setTimeout(() => {
+    //     const min = windSpeedLayer.options.renderer.parent.min;
+    //     const max = windSpeedLayer.options.renderer.parent.max;
+
+    //     windSpeedLayer.options.renderer.setDisplayRange(
+    //         min,
+    //         windSpeedLayer.options.renderer.options.displayMax
+    //     );
+
+    //     windSpeedLayer.options.renderer.setDisplayRange(
+    //         windSpeedLayer.options.renderer.options.displayMin,
+    //         max
+    //     );
+
+    //     document.getElementById("displayMin").value = min
+    //     document.getElementById("displayMax").value = max
+    // }, 1000)
+
     setTimeout(() => {
         const min = windSpeedLayer.options.renderer.parent.min;
         const max = windSpeedLayer.options.renderer.parent.max;
+
+        // Print the min and max values to the console
         console.log("Min value:", min);
         console.log("Max value:", max);
 
@@ -78,9 +98,9 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
             max
         );
 
-        document.getElementById("displayMin").value = min
-        document.getElementById("displayMax").value = max
-    }, 1000)
+        document.getElementById("displayMin").value = min;
+        document.getElementById("displayMax").value = max;
+    }, 1000);
 
 
     // VECTOR ARROW EG
