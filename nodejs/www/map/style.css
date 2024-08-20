@@ -34,13 +34,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
+    height: 60px;
     position: relative;
     padding: 0 1rem;
 }
 
 .nav-wrapper .logo h3 {
     color: #efefef;
+    margin: 0;
 }
 
 .menu {
