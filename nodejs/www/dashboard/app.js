@@ -14,11 +14,27 @@ var optionsSound = {
     series: [
         {
             name: 'Holidays',
-            data: [28, 29, 33, 36, 32, 32, 33]
+            data: [49.53449293,
+                49.58312697,
+                49.71402849,
+                49.60844574,
+                49.54935379,
+                49.53211022,
+                49.37294637
+            ]
         },
         {
             name: 'Workdays',
-            data: [12, 11, 14, 18, 17, 13, 13]
+            data: [50.01679162,
+                52.29034585,
+                52.10137783,
+                51.50246357,
+                50.77135541,
+                51.22349203,
+                51.26201584,
+                51.4033286,
+                52.20071973
+            ]
         }
     ],
 
@@ -63,14 +79,14 @@ var optionsSound = {
         size: 1
     },
     xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         title: {
-            text: 'Month'
+            text: 'Date'
         }
     },
     yaxis: {
         title: {
-            text: 'Temperature'
+            text: 'Sound level dB(A)'
         },
         min: 5,
         max: 40
