@@ -1,100 +1,78 @@
-// sound
-var optionsSound = {
+
+var options = {
     series: [
         {
-            name: '01',
-            data: []
+            name: "High - 2013",
+            data: [28, 29, 33, 36, 32, 32, 33]
         },
         {
-            name: '02',
-            data: []
-        },
-        {
-            name: '03',
-            data: []
-        },
-        {
-            name: '04',
-            data: []
-        },
-        {
-            name: '05',
-            data: []
-        },
-        {
-            name: '06',
-            data: []
-        },
-        {
-            name: '07',
-            data: []
-        },
-        {
-            name: '08',
-            data: []
-        },
-        {
-            name: '09',
-            data: []
-        },
-        {
-            name: '10',
-            data: []
+            name: "Low - 2013",
+            data: [12, 11, 14, 18, 17, 13, 13]
         }
     ],
-
-    colors: ["#F4A460", "#FF6EB4", "#008B8B", "#EE4000", "#00B2EE", "#9932CC", "#4682B4", "#32CD32", "#CD5555", " #FF1493"],
-
     chart: {
         height: 350,
         type: 'line',
+        dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+        },
         zoom: {
             enabled: false
+        },
+        toolbar: {
+            show: false
         }
     },
+    colors: ['#77B6EA', '#545454'],
     dataLabels: {
-        enabled: true
+        enabled: true,
     },
     stroke: {
-        curve: 'straight'
+        curve: 'smooth'
     },
     title: {
-        text: 'ระดับเสียง',
+        text: 'Average High & Low Temperature',
         align: 'left'
     },
     grid: {
+        borderColor: '#e7e7e7',
         row: {
             colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
             opacity: 0.5
         },
     },
+    markers: {
+        size: 1
+    },
     xaxis: {
-        type: 'datetime',
-        // range: XAXISRANGE,
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        title: {
+            text: 'Month'
+        }
+    },
+    yaxis: {
+        title: {
+            text: 'Temperature'
+        },
+        min: 5,
+        max: 40
+    },
+    legend: {
+        position: 'top',
+        horizontalAlign: 'right',
+        floating: true,
+        offsetY: -25,
+        offsetX: -5
     }
 };
 
-var chartsound = new ApexCharts(document.querySelector("#chartSound"), optionsSound);
-chartsound.render();
-
-
-window.setInterval(function () {
-    axios.get('/sss/api/data').then(r => {
-        const sound = r.data.filter((a) => { return a.stationname == '01' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
-        const sound1 = r.data.filter((a) => { return a.stationname == '02' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
-        const sound2 = r.data.filter((a) => { return a.stationname == '03' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
-        const sound3 = r.data.filter((a) => { return a.stationname == '04' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
-        const sound4 = r.data.filter((a) => { return a.stationname == '05' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
-        const sound5 = r.data.filter((a) => { return a.stationname == '06' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
-        const sound6 = r.data.filter((a) => { return a.stationname == '07' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
-        const sound7 = r.data.filter((a) => { return a.stationname == '08' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
-        const sound8 = r.data.filter((a) => { return a.stationname == '09' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
-        const sound9 = r.data.filter((a) => { return a.stationname == '10' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
-
-
-        chartsound.updateSeries([{ data: sound }, { data: sound1 }, { data: sound2 }, { data: sound3 }, { data: sound4 }, { data: sound5 }, { data: sound6 }, { data: sound7 }, { data: sound8 }, { data: sound9 }])
-    })
-}, 3000)
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
 
 
 function toggleHam(x) {

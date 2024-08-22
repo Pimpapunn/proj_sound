@@ -1,0 +1,239 @@
+app.js
+// sound
+var optionsSound = {
+    series: [
+        {
+            name: '01',
+            data: []
+        },
+        {
+            name: '02',
+            data: []
+        },
+        {
+            name: '03',
+            data: []
+        },
+        {
+            name: '04',
+            data: []
+        },
+        {
+            name: '05',
+            data: []
+        },
+        {
+            name: '06',
+            data: []
+        },
+        {
+            name: '07',
+            data: []
+        },
+        {
+            name: '08',
+            data: []
+        },
+        {
+            name: '09',
+            data: []
+        },
+        {
+            name: '10',
+            data: []
+        }
+    ],
+
+    colors: ["#F4A460", "#FF6EB4", "#008B8B", "#EE4000", "#00B2EE", "#9932CC", "#4682B4", "#32CD32", "#CD5555", " #FF1493"],
+
+    chart: {
+        height: 350,
+        type: 'line',
+        zoom: {
+            enabled: false
+        }
+    },
+    dataLabels: {
+        enabled: true
+    },
+    stroke: {
+        curve: 'straight'
+    },
+    title: {
+        text: 'ระดับเสียง',
+        align: 'left'
+    },
+    grid: {
+        row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+        },
+    },
+    xaxis: {
+        type: 'datetime',
+        // range: XAXISRANGE,
+    }
+};
+
+var chartsound = new ApexCharts(document.querySelector("#chartSound"), optionsSound);
+chartsound.render();
+
+
+window.setInterval(function () {
+    axios.get('/sss/api/data').then(r => {
+        const sound = r.data.filter((a) => { return a.stationname == '01' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound1 = r.data.filter((a) => { return a.stationname == '02' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound2 = r.data.filter((a) => { return a.stationname == '03' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound3 = r.data.filter((a) => { return a.stationname == '04' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound4 = r.data.filter((a) => { return a.stationname == '05' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound5 = r.data.filter((a) => { return a.stationname == '06' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound6 = r.data.filter((a) => { return a.stationname == '07' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound7 = r.data.filter((a) => { return a.stationname == '08' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound8 = r.data.filter((a) => { return a.stationname == '09' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound9 = r.data.filter((a) => { return a.stationname == '10' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+
+
+        chartsound.updateSeries([{ data: sound }, { data: sound1 }, { data: sound2 }, { data: sound3 }, { data: sound4 }, { data: sound5 }, { data: sound6 }, { data: sound7 }, { data: sound8 }, { data: sound9 }])
+    })
+}, 3000)
+
+
+function toggleHam(x) {
+    x.classList.toggle("change");
+
+    let myMenu = document.getElementById('myMenu');
+    if (myMenu.className === 'menu') {
+        myMenu.className += ' menu-active'
+    } else {
+        myMenu.className = 'menu';
+    }
+}
+
+
+style.css
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: Poppins;
+    margin: 0;
+    font-size: 16px;
+    background-color: #bbdff2;
+}
+
+#chartSound {
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #efefef;
+}
+
+nav {
+    background-color: rgb(0, 0, 0);
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.nav-wrapper .logo h3 {
+    color: #efefef;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.menu li a {
+    color: #efefef;
+    text-decoration: none;
+}
+
+/* Hamburgur Menu css */
+.ham-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #1c2e38;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+@media only screen and (min-width:416px) {
+    .ham-menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:415px) {
+    .menu {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-wrapper {
+        padding: 1rem;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-active {
+        display: block;
+    }
+
+    .menu li {
+        margin: 1rem 0;
+        padding: 1rem 0.5rem;
+        transition: 0.3s;
+    }
+
+    .menu li:hover {
+        background-color: #0b1b12;
+    }
+}
