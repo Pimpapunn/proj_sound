@@ -88,8 +88,8 @@ var optionsSound = {
         title: {
             text: 'Sound level dB(A)'
         },
-        min: 5,
-        max: 40
+        min: 30,
+        max: 60
     },
     legend: {
         position: 'top',
