@@ -78,7 +78,7 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
 
         document.getElementById("displayMin").value = min
         document.getElementById("displayMax").value = max
-    }, 2000)
+    }, 3000)
 
 
 
