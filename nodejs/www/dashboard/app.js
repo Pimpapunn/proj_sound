@@ -87,7 +87,7 @@ var optionsSound = {
 var chartsound = new ApexCharts(document.querySelector("#chartSound"), optionsSound);
 chartsound.render();
 
-
+//graph2
 var options = {
     series: [{
         name: 'Flies',
@@ -180,6 +180,7 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chart-line2"), options);
 chart.render();
+
 
 var optionsLine = {
     series: [{
