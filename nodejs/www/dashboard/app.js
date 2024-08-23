@@ -96,7 +96,7 @@ var optionsSound = {
         horizontalAlign: 'right',
         floating: true,
         offsetY: -25,
-        offsetX: -5
+        offsetX: -2
     }
 };
 
