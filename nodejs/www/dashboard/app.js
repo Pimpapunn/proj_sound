@@ -10,148 +10,99 @@ function toggleHam(x) {
 }
 
 // sound
-var options = {
-    series: [{
-        name: 'Flies',
-        data: data1
-    }, {
-        name: 'Spiders',
-        data: data2
-    }],
-    chart: {
-        id: 'chart2',
-        type: 'line',
-        height: 230,
-        dropShadow: {
-            enabled: true,
-            enabledOnSeries: [1]
-        },
-        toolbar: {
-            autoSelected: 'pan',
-            show: false
-        }
-    },
-    colors: ['#008FFB', '#00E396'],
-    stroke: {
-        width: 3
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        width: [2, 6],
-        curve: ['straight', 'monotoneCubic']
-    },
-    fill: {
-        opacity: [1, 0.75],
-    },
-    markers: {
-        size: 0
-    },
-    yaxis: [
+var optionsSound = {
+    series: [
         {
-            seriesName: 'Flies',
-            axisTicks: {
-                show: true,
-                color: '#008FFB'
-            },
-            axisBorder: {
-                show: true,
-                color: '#008FFB'
-            },
-            labels: {
-                style: {
-                    colors: '#008FFB',
-                }
-            },
-            title: {
-                text: "Flies",
-                style: {
-                    color: '#008FFB'
-                }
-            },
+            name: '01',
+            data: []
         },
         {
-            seriesName: 'Spiders',
-            opposite: true,
-            axisTicks: {
-                show: true,
-                color: '#00E396'
-            },
-            axisBorder: {
-                show: true,
-                color: '#00E396'
-            },
-            labels: {
-                style: {
-                    colors: '#00E396'
-                }
-            },
-            title: {
-                text: "Spiders",
-                style: {
-                    color: '#00E396'
-                }
-            },
+            name: '02',
+            data: []
+        },
+        {
+            name: '03',
+            data: []
+        },
+        {
+            name: '04',
+            data: []
+        },
+        {
+            name: '05',
+            data: []
+        },
+        {
+            name: '06',
+            data: []
+        },
+        {
+            name: '07',
+            data: []
+        },
+        {
+            name: '08',
+            data: []
+        },
+        {
+            name: '09',
+            data: []
+        },
+        {
+            name: '10',
+            data: []
         }
     ],
-    xaxis: {
-        type: 'datetime'
-    }
-};
 
-var chart = new ApexCharts(document.querySelector("#chart-line2"), options);
-chart.render();
+    colors: ["#F4A460", "#FF6EB4", "#008B8B", "#EE4000", "#00B2EE", "#9932CC", "#4682B4", "#32CD32", "#CD5555", " #FF1493"],
 
-var optionsLine = {
-    series: [{
-        name: 'Flies',
-        data: data1
-    }, {
-        name: 'Spiders',
-        data: data2
-    }],
     chart: {
-        id: 'chart1',
-        height: 130,
-        type: 'area',
-        brush: {
-            target: 'chart2',
-            enabled: true
-        },
-        selection: {
-            enabled: true,
-            xaxis: {
-                min: new Date('24 April 2017').getTime(),
-                max: new Date('29 May 2017').getTime()
-            }
-        },
-    },
-    colors: ['#008FFB', '#00E396'],
-    stroke: {
-        width: [1, 3],
-        curve: ['straight', 'monotoneCubic']
-    },
-    fill: {
-        type: 'gradient',
-        gradient: {
-            opacityFrom: 0.91,
-            opacityTo: 0.1,
-        }
-    },
-    xaxis: {
-        type: 'datetime',
-        tooltip: {
+        height: 350,
+        type: 'line',
+        zoom: {
             enabled: false
         }
     },
-    yaxis: {
-        max: 100,
-        tickAmount: 2
+    dataLabels: {
+        enabled: true
+    },
+    stroke: {
+        curve: 'straight'
+    },
+    title: {
+        text: 'ระดับเสียง',
+        align: 'left'
+    },
+    grid: {
+        row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+        },
+    },
+    xaxis: {
+        type: 'datetime',
+        // range: XAXISRANGE,
     }
 };
 
-var chartLine = new ApexCharts(document.querySelector("#chart-line"), optionsLine);
-chartLine.render();
+var chartsound = new ApexCharts(document.querySelector("#chartSound"), optionsSound);
+chartsound.render();
 
 
+window.setInterval(function () {
+    axios.get('/sss/api/data').then(r => {
+        const sound = r.data.filter((a) => { return a.stationname == '01' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound1 = r.data.filter((a) => { return a.stationname == '02' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound2 = r.data.filter((a) => { return a.stationname == '03' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound3 = r.data.filter((a) => { return a.stationname == '04' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound4 = r.data.filter((a) => { return a.stationname == '05' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound5 = r.data.filter((a) => { return a.stationname == '06' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound6 = r.data.filter((a) => { return a.stationname == '07' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound7 = r.data.filter((a) => { return a.stationname == '08' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound8 = r.data.filter((a) => { return a.stationname == '09' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+        const sound9 = r.data.filter((a) => { return a.stationname == '10' }).map(a => ({ x: new Date(a.ts).getTime(), y: Number(a.sound_level) }))
+
+
+        chartsound.updateSeries([{ data: sound }, { data: sound1 }, { data: sound2 }, { data: sound3 }, { data: sound4 }, { data: sound5 }, { data: sound6 }, { data: sound7 }, { data: sound8 }, { data: sound9 }])
+    })
+}, 3000)
