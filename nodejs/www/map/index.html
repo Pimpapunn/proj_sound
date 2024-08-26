@@ -49,115 +49,131 @@
         <div class="row">
             <div class="col-sm-8">
                 <div class="card" id="map">
+                    <div id="legend-container" class="legend-container">
+                        <center>
+                            <h6 class="text-lg font-semibold mb-2">SVF</h6>
+                        </center>
+                        <div><span style="background-color:#c50000;"></span> 0-10%</div>
+                        <div><span style="background-color:#d62929;"></span> 10-20%</div>
+                        <div><span style="background-color:#ea5252;"></span> 20-30%</div>
+                        <div><span style="background-color:#fb6767;"></span> 30-40%</div>
+                        <div><span style="background-color:#f9aeae;"></span> 40-50%</div>
+                        <div><span style="background-color:#deecfb;"></span> 50-60%</div>
+                        <div><span style="background-color:#bedaf7;"></span> 60-70%</div>
+                        <div><span style="background-color:#7ab3ef;"></span> 70-80%</div>
+                        <div><span style="background-color:#368ce7;"></span> 80-90%</div>
+                        <div><span style="background-color:#1666ba;"></span> 90-100%</div>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Select During Time</h3>
-                        <div>
-                            <!-- Dropdown สำหรับ "Select During Time" -->
-                            <div class="mb-3">
-                                <select class="form-select w-100" id="dayName" aria-label="Select Day">
-                                    <option selected>Open this select menu</option>
-                                    <option value="monday">Monday</option>
-                                    <option value="tuesday">Tuesday</option>
-                                    <option value="wednesday">Wednesday</option>
-                                    <option value="thursday">Thursday</option>
-                                    <option value="friday">Friday</option>
-                                    <option value="saturday">Saturday</option>
-                                    <option value="sunday">Sunday</option>
-                                </select>
-                            </div>
-                            <!-- Dropdown สำหรับ "Time" -->
-                            <div class="mb-3">
-                                <h3>Time</h3>
-                                <select class="form-select w-100" id="time" aria-label="Select Time">
-                                    <option selected>Open this select menu</option>
-                                    <option value="08_09">8.00-9.00</option>
-                                    <option value="09_10">9.00-10.00</option>
-                                    <option value="10_11">10.00-11.00</option>
-                                    <option value="11_12">11.00-12.00</option>
-                                    <option value="12_13">12.00-13.00</option>
-                                    <option value="13_14">13.00-14.00</option>
-                                    <option value="14_15">14.00-15.00</option>
-                                    <option value="15_16">15.00-16.00</option>
-                                    <option value="16_17">16.00-17.00</option>
-                                </select>
-                            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Select During Time</h3>
+                    <div>
+                        <!-- Dropdown สำหรับ "Select During Time" -->
+                        <div class="mb-3">
+                            <select class="form-select w-100" id="dayName" aria-label="Select Day">
+                                <option selected>Open this select menu</option>
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">Tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                                <option value="friday">Friday</option>
+                                <option value="saturday">Saturday</option>
+                                <option value="sunday">Sunday</option>
+                            </select>
+                        </div>
+                        <!-- Dropdown สำหรับ "Time" -->
+                        <div class="mb-3">
+                            <h3>Time</h3>
+                            <select class="form-select w-100" id="time" aria-label="Select Time">
+                                <option selected>Open this select menu</option>
+                                <option value="08_09">8.00-9.00</option>
+                                <option value="09_10">9.00-10.00</option>
+                                <option value="10_11">10.00-11.00</option>
+                                <option value="11_12">11.00-12.00</option>
+                                <option value="12_13">12.00-13.00</option>
+                                <option value="13_14">13.00-14.00</option>
+                                <option value="14_15">14.00-15.00</option>
+                                <option value="15_16">15.00-16.00</option>
+                                <option value="16_17">16.00-17.00</option>
+                            </select>
+                        </div>
 
-                            <!-- ปุ่มประมวลผล -->
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" onclick="getData()">Submit</button>
-                            </div>
+                        <!-- ปุ่มประมวลผล -->
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary" onclick="getData()">Submit</button>
                         </div>
                     </div>
                 </div>
-
-                <div class="card mt-2">
-                    <div class="card-body">
-                        <form>
-                            <p>
-                                <label>displayMin:
-                                    <input class="form-control" type="number" id="displayMin" />
-                                </label>
-                                <label>displayMax:
-                                    <input class="form-control" type="number" id="displayMax" />
-                                </label>
-                            </p>
-                            <p>
-                                <label>clampMin:
-                                    <input class="form-check-input" type="checkbox" id="clampLow" />
-                                </label>
-                                <label>clampMax:
-                                    <input class="form-check-input" type="checkbox" id="clampHigh" />
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    colorScale:
-                                    <select class="form-select" id="colorScale">
-                                        <option>viridis</option>
-                                        <option>inferno</option>
-                                        <option>turbo</option>
-                                        <option>rainbow</option>
-                                        <option>jet</option>
-                                        <option>hsv</option>
-                                        <option>hot</option>
-                                        <option>cool</option>
-                                        <option>spring</option>
-                                        <option>summer</option>
-                                        <option>winter</option>
-                                        <option>autumn</option>
-                                        <option>bone</option>
-                                        <option>copper</option>
-                                        <option>greys</option>
-                                        <option>yignbu</option>
-                                        <option>greens</option>
-                                        <option>yiorrd</option>
-                                        <option>bluered</option>
-                                        <option>rdbu</option>
-                                        <option>picnic</option>
-                                        <option>portland</option>
-                                        <option>blackbody</option>
-                                        <option>earth</option>
-                                        <option>electric</option>
-                                        <option>magma</option>
-                                        <option>plasma</option>
-                                    </select>
-                                </label>
-                            </p>
-                            <!-- <p>
-                                <button class="btn btn-dark" id="getBounds">Zoom to bounds</button> -->
-                            <!-- <button class="btn btn-dark" id="getColorbarOptions">Log getColorbarOptions</button> -->
-                            <!-- </p> -->
-                        </form>
-                    </div>
-                </div>
-
-
             </div>
+
+            <div class="card mt-2">
+                <div class="card-body">
+                    <form>
+                        <p>
+                            <label>displayMin:
+                                <input class="form-control" type="number" id="displayMin" />
+                            </label>
+                            <label>displayMax:
+                                <input class="form-control" type="number" id="displayMax" />
+                            </label>
+                        </p>
+                        <p>
+                            <label>clampMin:
+                                <input class="form-check-input" type="checkbox" id="clampLow" />
+                            </label>
+                            <label>clampMax:
+                                <input class="form-check-input" type="checkbox" id="clampHigh" />
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                colorScale:
+                                <select class="form-select" id="colorScale">
+                                    <option>viridis</option>
+                                    <option>inferno</option>
+                                    <option>turbo</option>
+                                    <option>rainbow</option>
+                                    <option>jet</option>
+                                    <option>hsv</option>
+                                    <option>hot</option>
+                                    <option>cool</option>
+                                    <option>spring</option>
+                                    <option>summer</option>
+                                    <option>winter</option>
+                                    <option>autumn</option>
+                                    <option>bone</option>
+                                    <option>copper</option>
+                                    <option>greys</option>
+                                    <option>yignbu</option>
+                                    <option>greens</option>
+                                    <option>yiorrd</option>
+                                    <option>bluered</option>
+                                    <option>rdbu</option>
+                                    <option>picnic</option>
+                                    <option>portland</option>
+                                    <option>blackbody</option>
+                                    <option>earth</option>
+                                    <option>electric</option>
+                                    <option>magma</option>
+                                    <option>plasma</option>
+                                </select>
+                            </label>
+                        </p>
+                        <!-- <p>
+                                <button class="btn btn-dark" id="getBounds">Zoom to bounds</button> -->
+                        <!-- <button class="btn btn-dark" id="getColorbarOptions">Log getColorbarOptions</button> -->
+                        <!-- </p> -->
+                    </form>
+                </div>
+            </div>
+
+
         </div>
+    </div>
     </div>
     </div>
 </body>
