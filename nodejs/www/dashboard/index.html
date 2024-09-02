@@ -16,6 +16,16 @@
 
 </head>
 
+<style>
+    .card {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #chart {
+        height: 350px;
+    }
+</style>
 
 <body>
     <nav>
@@ -43,12 +53,47 @@
             </div>
         </div>
     </nav>
-    <div id="chartSound"></div><br />
+
+    <center>
+        <br>
+        <h4>กราฟแท่งแสดงผลการศึกษาค่าเฉลี่ยมาตรฐานของระดับเสียง dB(A) ในแต่ละช่วงเวลา<br>
+            บริเวณกลุ่มอาคารเรียนรวม มหาวิทยาลัยเชียงใหม่
+        </h4>
+        <p></p>
+    </center>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Weekly Sound Levels</span>
+                <div id="chart"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <center>
+        <br>
+        <h4>กราฟเส้นแสดงผลการศึกษาค่าเฉลี่ยมาตรฐานของระดับเสียง dB(A) ในแต่ละช่วงเวลา<br>
+            ระหว่างวันทำงานและวันหยุดบริเวณกลุ่มอาคารเรียนรวม มหาวิทยาลัยเชียงใหม่
+        </h4>
+        <p></p>
+    </center>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Workday & Holiday Sound Levels</span>
+                <div id="chart-line"></div>
+            </div>
+        </div>
+    </div>
+
 
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 <script src="./app.js"></script>
 
 </html>
