@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const axios = require("axios");
 const { Pool } = require('pg');
-
+const line = require("@line/bot-sdk");
 const pg = new Pool({
     host: 'postgis',
     port: 5432,
@@ -10,6 +10,19 @@ const pg = new Pool({
     user: 'postgres',
     password: '1234',
 })
+
+app.post("/webhook", line.middleware(config), (req, res) => {
+    Promise.all(req.body.events.map(event => {
+        console.log('event', event);
+        return handleEvent(event);
+    })).then(() => res.end()).catch((err) => {
+        console.error(err);
+        res.status(500).end();
+    });
+
+    res.sendStatus(200)
+})
+
 
 
 app.get('/sss/api/data', (req, res) => {
