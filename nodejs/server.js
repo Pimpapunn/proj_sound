@@ -60,6 +60,8 @@ function reply(reply_token) {
 }
 
 function pushMessage(userId, messageText) {
+    console.log(process.env.channelAccessToken);
+
     const options = {
         url: 'https://api.line.me/v2/bot/message/push',
         headers: {

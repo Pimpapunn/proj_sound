@@ -84,9 +84,9 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
 
     // VECTOR ARROW EG
     // const windDirUrl = soundmap;
-    const arrowRenderer = L.LeafletGeotiff.vectorArrows({
-        arrowSize: 20,
-    });
+    // const arrowRenderer = L.LeafletGeotiff.vectorArrows({
+    //     arrowSize: 20,
+    // });
 
     const windDirLayer = L.leafletGeotiff(soundmap, {
         name: "sound",
