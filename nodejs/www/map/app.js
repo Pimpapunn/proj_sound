@@ -87,10 +87,6 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
     //     arrowSize: 20,
     // });
 
-    const windDirLayer = L.leafletGeotiff(soundmap, {
-        name: "sound",
-        renderer: arrowRenderer,
-    }).addTo(featureSound);
 
     $("#displayMin").on("change", (event) => {
         windSpeedLayer.options.renderer.setDisplayRange(
