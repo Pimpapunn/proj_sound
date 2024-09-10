@@ -149,8 +149,8 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
 }
 
 
-// const server = "http://localhost:5400/bds/interpolation"
-const server = "https://geodev.fun/bds/interpolation"
+const server = "http://localhost:5400/bds/interpolation"
+// const server = "https://geodev.fun/bds/interpolation"
 
 function getData() {
     let dayName = document.getElementById("dayName").value
