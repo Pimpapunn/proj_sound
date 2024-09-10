@@ -9,6 +9,7 @@ body {
 
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +20,7 @@ body {
 a {
     text-decoration: none;
     color: #efefef;
+
 }
 
 nav {
@@ -93,9 +95,19 @@ nav {
     .ham-menu {
         display: none;
     }
+
+    .subtext {
+        font-size: 10px;
+        /* ลดขนาดสำหรับโทรศัพท์มือถือ */
+    }
 }
 
 @media only screen and (max-width:415px) {
+    .subtext {
+        font-size: 10px;
+        /* ลดขนาดสำหรับโทรศัพท์มือถือ */
+    }
+
     .menu {
         display: none;
         width: 100%;
@@ -256,5 +268,63 @@ body {
     .grid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
+    }
+
+    .subtext {
+        font-size: 10px;
+        /* ลดขนาดสำหรับโทรศัพท์มือถือ */
+    }
+}
+
+.jumbotron {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    text-align: center;
+    font-size: 10px;
+    /* Default size */
+}
+
+h3 {
+    margin-bottom: 1rem;
+}
+
+.subtext {
+    font-size: 10px;
+    /* ลดขนาดสำหรับโทรศัพท์มือถือ */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .jumbotron {
+        font-size: 12px;
+        /* ลดขนาดลงสำหรับหน้าจอเล็ก */
+    }
+
+    h3 {
+        font-size: 16px;
+        /* ปรับขนาดหัวเรื่องให้เล็กลง */
+    }
+
+    .subtext {
+        font-size: 10px !important;
+        /* บังคับให้ใช้ขนาดนี้สำหรับโทรศัพท์มือถือ */
+    }
+}
+
+/* Media query for very small screens, e.g., phones */
+@media (max-width: 480px) {
+    .jumbotron {
+        font-size: 12px;
+        /* ลดขนาดลงสำหรับโทรศัพท์มือถือ */
+    }
+
+    h3 {
+        font-size: 16px;
+        /* ปรับขนาดหัวเรื่องให้เหมาะสม */
+    }
+
+    .subtext {
+        font-size: 10px !important;
+        /* บังคับให้ใช้ขนาดนี้สำหรับโทรศัพท์มือถือ */
     }
 }

@@ -22,7 +22,6 @@ const basemap = {
 }
 const overlay = {
     "แผนที่เสียง": rasterSound.addTo(map),
-    "ทิศทางเสียง": featureSound.addTo(map)
 }
 L.control.layers(basemap, overlay).addTo(map)
 
@@ -78,7 +77,7 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
 
         document.getElementById("displayMin").value = min
         document.getElementById("displayMax").value = max
-    }, 3000)
+    }, 2000)
 
 
 
