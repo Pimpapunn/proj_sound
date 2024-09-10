@@ -315,16 +315,13 @@ h3 {
 @media (max-width: 480px) {
     .jumbotron {
         font-size: 12px;
-        /* ลดขนาดลงสำหรับโทรศัพท์มือถือ */
     }
 
     h3 {
         font-size: 16px;
-        /* ปรับขนาดหัวเรื่องให้เหมาะสม */
     }
 
     .subtext {
         font-size: 10px !important;
-        /* บังคับให้ใช้ขนาดนี้สำหรับโทรศัพท์มือถือ */
     }
 }
