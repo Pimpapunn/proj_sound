@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-app.get('/geojson/buildingcmu', (req, res) => {
+app.get('/sss/geojson/buildingcmu', (req, res) => {
     res.sendFile(path.join(__dirname, 'www/map/buildingcmu.geojson'), err => {
         if (err) {
             console.error('Error sending file:', err);
@@ -35,7 +35,7 @@ app.get('/geojson/buildingcmu', (req, res) => {
     });
 });
 
-app.get('/geojson/point', (req, res) => {
+app.get('/sss/geojson/point', (req, res) => {
     res.sendFile(path.join(__dirname, 'www/map/point.geojson'), err => {
         if (err) {
             console.error('Error sending file:', err);

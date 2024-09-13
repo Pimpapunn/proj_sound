@@ -22,7 +22,7 @@ const overlay = {
 
 let layerControl = L.control.layers(basemap, overlay).addTo(map);
 
-fetch('/geojson/buildingcmu')
+fetch('/sss/geojson/buildingcmu')
     .then(response => response.json())
     .then(data => {
         var studyArea = L.geoJSON(data, {
@@ -42,7 +42,7 @@ fetch('/geojson/buildingcmu')
     })
     .catch(error => console.error('Error loading GeoJSON:', error));
 
-fetch('/geojson/point')
+fetch('/sss/geojson/point')
     .then(response => response.json())
     .then(data => {
         var pointLayer = L.geoJSON(data, {
