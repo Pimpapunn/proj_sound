@@ -66,7 +66,7 @@ fetch('/geojson/point')
         // อัปเดตการควบคุมเลเยอร์หลังจากเพิ่มเลเยอร์ใหม่
         L.control.layers(basemap, overlay).addTo(map);
     })
-// .catch(error => console.error('Error loading GeoJSON:', error));
+    .catch(error => console.error('Error loading GeoJSON:', error));
 
 
 function toggleHam(x) {
