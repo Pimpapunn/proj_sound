@@ -37,7 +37,7 @@ fetch('/geojson/buildingcmu')
         studyArea.addTo(map);
         // L.control.layers(basemap, overlay).addTo(map);
     })
-// .catch(error => console.error('Error loading GeoJSON:', error));
+    .catch(error => console.error('Error loading GeoJSON:', error));
 
 fetch('/geojson/point')
     .then(response => response.json())
