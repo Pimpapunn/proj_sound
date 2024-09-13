@@ -18,8 +18,9 @@ const basemap = {
 }
 const overlay = {
     "แผนที่เสียง": rasterSound.addTo(map),
-}
-// L.control.layers(basemap, overlay).addTo(map)
+};
+
+let layerControl = L.control.layers(basemap, overlay).addTo(map);
 
 fetch('/geojson/buildingcmu')
     .then(response => response.json())
@@ -35,7 +36,9 @@ fetch('/geojson/buildingcmu')
         });
         overlay['ขอบเขตพื้นที่ศึกษา'] = studyArea;
         studyArea.addTo(map);
-        // L.control.layers(basemap, overlay).addTo(map);
+
+        // Update the layer control
+        layerControl.addOverlay(studyArea, 'ขอบเขตพื้นที่ศึกษา');
     })
     .catch(error => console.error('Error loading GeoJSON:', error));
 
@@ -63,10 +66,11 @@ fetch('/geojson/point')
         overlay['จุดวางอุปกรณ์ IOT'] = pointLayer;
         pointLayer.addTo(map);
 
-        // อัปเดตการควบคุมเลเยอร์หลังจากเพิ่มเลเยอร์ใหม่
-        L.control.layers(basemap, overlay).addTo(map);
+        // Update the layer control
+        layerControl.addOverlay(pointLayer, 'จุดวางอุปกรณ์ IOT');
     })
     .catch(error => console.error('Error loading GeoJSON:', error));
+
 
 
 function toggleHam(x) {
