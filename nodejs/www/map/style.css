@@ -3,11 +3,34 @@
 #map {
     width: 100%;
     height: 560px;
+    margin-bottom: 40px;
+}
+
+h3 {
+    padding-top: 15px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+p1 {
+    color: rgb(255, 255, 255);
 }
 
 h4 {
-    color: #ffffff;
+    color: #000000;
+}
 
+h5 {
+    color: #ffffff;
+}
+
+.card {
+    margin-top: -30px;
+    height: 275px;
+}
+
+.card-body {
+    padding: 15px;
 }
 
 body {
@@ -15,7 +38,13 @@ body {
     margin: 0;
     font-size: 16px;
     background-color: #19313d;
+    width: 100%;
+    height: 100vh;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 
 * {
     margin: 0;
@@ -31,7 +60,7 @@ a {
 nav {
     background-color: rgba(0, 0, 0, 0.9);
     padding-top: 10px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 
@@ -135,4 +164,41 @@ nav {
 .custom-select {
     width: 100%;
     /* หรือกำหนดขนาดตามต้องการ เช่น 300px */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .jumbotron {
+        font-size: 12px;
+        /* ลดขนาดลงสำหรับหน้าจอเล็ก */
+    }
+
+    h3 {
+        font-size: 16px;
+        /* ปรับขนาดหัวเรื่องให้เล็กลง */
+    }
+
+    .subtext {
+        font-size: 10px !important;
+        /* บังคับให้ใช้ขนาดนี้สำหรับโทรศัพท์มือถือ */
+    }
+
+
+}
+
+/* Media query for very small screens, e.g., phones */
+@media (max-width: 480px) {
+    .jumbotron {
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .subtext {
+        font-size: 10px !important;
+    }
+
+
 }

@@ -23,7 +23,7 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <h4>Sound Landscape</h4>
+                    <h5>Sound Landscape</h5>
                 </div>
 
                 <ul class="menu" id="myMenu">
@@ -45,115 +45,73 @@
             </div>
         </div>
     </nav>
+    <center>
+        <h3>Map showing noise levels in the area of ​​study buildings in Chiang Mai University
+        </h3>
+    </center>
+
     <div class="container mt-5">
         <div class="row">
-            <div class="col-sm-8">
-                <div class="card" id="map" style="position: relative;">
+            <div class="col-sm-8 d-flex flex-column">
+                <div class="card flex-fill" id="map" style="position: relative;">
                     <div id="legend-container" class="legend-container"
                         style="position: absolute; bottom: 10px; right: 10px; background: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 5px; z-index: 1000;">
                         <div style="text-align: center;">
-                            <h6 class="text-lg font-semibold mb-2">dB(A)</h6>
+                            <h6 class="text-lg font-semibold mb-2">Sound Level dB(A)</h6>
                         </div>
-                        <div>
-                            <span
-                                style="background-color:#200e38; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"
-                                aria-label="40 to 45 dB(A)"></span>40-45 dB(A)
-                        </div>
-                        <div>
-                            <span
-                                style="background-color:#271e4255; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"
-                                aria-label="46 to 50 dB(A)"></span>46-50 dB(A)
-                        </div>
-                        <div>
-                            <span
-                                style="background-color:#372e89; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"
-                                aria-label="51 to 55 dB(A)"></span>51-55 dB(A)
-                        </div>
-                        <div>
-                            <span
-                                style="background-color:#1b817f; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"
-                                aria-label="56 to 60 dB(A)"></span>56-60 dB(A)
-                        </div>
-                        <div>
-                            <span
-                                style="background-color:#2fa390; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"
-                                aria-label="61 to 65 dB(A)"></span>61-65 dB(A)
-                        </div>
-                        <div>
-                            <span
-                                style="background-color:#568532; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"
-                                aria-label="66 to 70 dB(A)"></span>66-70 dB(A)
-                        </div>
-                        <div>
-                            <span
-                                style="background-color:#a0fb76; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"
-                                aria-label="71 to 75 dB(A)"></span>71-75 dB(A)
-                        </div>
-                        <div>
-                            <span
-                                style="background-color:#b3bb5a; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"
-                                aria-label="76 to 80 dB(A)"></span>76-80 dB(A)
-                        </div>
-                        <div>
-                            <span
-                                style="background-color:#dbf03c; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"
-                                aria-label="81 to 85 dB(A)"></span>81-85 dB(A)
-                        </div>
-                        <div>
-                            <span
-                                style="background-color:#e4e81d; display: inline-block; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"
-                                aria-label="86 to 90 dB(A)"></span>86-90 dB(A)
-                        </div>
-
+                        <div id="legend-content"></div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body">
-                        <h3>Select During Time</h3>
-                        <div>
-                            <!-- Dropdown สำหรับ "Select During Time" -->
-                            <div class="mb-3">
-                                <select class="form-select w-100" id="dayName" aria-label="Select Day">
-                                    <option selected>Open this select menu</option>
-                                    <option value="monday">Monday</option>
-                                    <option value="tuesday">Tuesday</option>
-                                    <option value="wednesday">Wednesday</option>
-                                    <option value="thursday">Thursday</option>
-                                    <option value="friday">Friday</option>
-                                    <option value="saturday">Saturday</option>
-                                    <option value="sunday">Sunday</option>
-                                </select>
-                            </div>
-                            <!-- Dropdown สำหรับ "Time" -->
-                            <div class="mb-3">
-                                <h3>Time</h3>
-                                <select class="form-select w-100" id="time" aria-label="Select Time">
-                                    <option selected>Open this select menu</option>
-                                    <option value="08_09">8.00-9.00</option>
-                                    <option value="09_10">9.00-10.00</option>
-                                    <option value="10_11">10.00-11.00</option>
-                                    <option value="11_12">11.00-12.00</option>
-                                    <option value="12_13">12.00-13.00</option>
-                                    <option value="13_14">13.00-14.00</option>
-                                    <option value="14_15">14.00-15.00</option>
-                                    <option value="15_16">15.00-16.00</option>
-                                    <option value="16_17">16.00-17.00</option>
-                                </select>
-                            </div>
+                        <h4>Choose a day
+                            <h4 />
+                            <div>
+                                <!-- Dropdown สำหรับ "Select During Time" -->
+                                <div class="mb-3">
+                                    <select class="form-select w-100" id="dayName" aria-label="Select Day">
+                                        <option selected>Open this select menu</option>
+                                        <option value="monday">Monday</option>
+                                        <option value="tuesday">Tuesday</option>
+                                        <option value="wednesday">Wednesday</option>
+                                        <option value="thursday">Thursday</option>
+                                        <option value="friday">Friday</option>
+                                        <option value="saturday">Saturday</option>
+                                        <option value="sunday">Sunday</option>
+                                    </select>
+                                </div>
+                                <!-- Dropdown สำหรับ "Time" -->
+                                <div class="mb-3">
+                                    <h4>Choose duration
+                                    </h4>
+                                    <select class="form-select w-100" id="time" aria-label="Select Time">
+                                        <option selected>Open this select menu</option>
+                                        <option value="08_09">8.00-9.00</option>
+                                        <option value="09_10">9.00-10.00</option>
+                                        <option value="10_11">10.00-11.00</option>
+                                        <option value="11_12">11.00-12.00</option>
+                                        <option value="12_13">12.00-13.00</option>
+                                        <option value="13_14">13.00-14.00</option>
+                                        <option value="14_15">14.00-15.00</option>
+                                        <option value="15_16">15.00-16.00</option>
+                                        <option value="16_17">16.00-17.00</option>
+                                    </select>
+                                </div>
 
-                            <!-- ปุ่มประมวลผล -->
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" onclick="getData()">Submit</button>
+                                <!-- ปุ่มประมวลผล -->
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary" onclick="getData()">Submit</button>
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="card mt-2">
                     <div class="card-body">
                         <form>
+                            <h4>Function</h4>
                             <p>
                                 <label>displayMin:
                                     <input class="form-control" type="number" id="displayMin" />
@@ -162,14 +120,7 @@
                                     <input class="form-control" type="number" id="displayMax" />
                                 </label>
                             </p>
-                            <p>
-                                <label>clampMin:
-                                    <input class="form-check-input" type="checkbox" id="clampLow" />
-                                </label>
-                                <label>clampMax:
-                                    <input class="form-check-input" type="checkbox" id="clampHigh" />
-                                </label>
-                            </p>
+
                             <p>
                                 <label>
                                     colorScale:
@@ -203,13 +154,7 @@
                                         <option>plasma</option>
                                     </select>
                                 </label>
-                            </p>
-                            <!-- <p>
-                                <button class="btn btn-dark" id="getBounds">Zoom to bounds</button> -->
-                            <!-- <button class="btn btn-dark" id="getColorbarOptions">Log getColorbarOptions</button> -->
-                            <!-- </p> -->
-
-
+                            <div id="legend-content"></div>
                         </form>
                     </div>
                 </div>

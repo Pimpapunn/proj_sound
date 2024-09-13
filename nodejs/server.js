@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const axios = require("axios");
 const { Pool } = require('pg');
@@ -10,7 +11,6 @@ const pg = new Pool({
     user: 'postgres',
     password: '1234',
 })
-
 
 require('dotenv').config()
 
@@ -24,6 +24,26 @@ const bodyParser = require('body-parser')
 const request = require('request')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
+
+app.get('/geojson/buildingcmu', (req, res) => {
+    res.sendFile(path.join(__dirname, 'www/map/buildingcmu.geojson'), err => {
+        if (err) {
+            console.error('Error sending file:', err);
+            res.status(err.status || 500).end();
+        }
+    });
+});
+
+app.get('/geojson/point', (req, res) => {
+    res.sendFile(path.join(__dirname, 'www/map/point.geojson'), err => {
+        if (err) {
+            console.error('Error sending file:', err);
+            res.status(err.status || 500).end();
+        }
+    });
+});
+
 app.post('/sss/webhook', (req, res) => {
     let reply_token = req.body.events[0].replyToken
     console.log(req.body.events[0]);
@@ -131,4 +151,6 @@ app.use("/sss", express.static('www'))
 app.listen(3000, () => {
     console.log(`http://localhost:3000`);
 });
+
+
 
