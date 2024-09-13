@@ -66,7 +66,7 @@ var options = {
     fill: {
         opacity: 1
     },
-    colors: ['#FFFF00', '#FF1493', '#00FF7F', '#FF8C00', '#00BFFF', '#FF00FF', '#FF0000'],
+    colors: ['#2E8B57', '#4682B4', '#FF4500', '#32CD32', '#1E90FF', '#FF6347', '#FFD700'],
     tooltip: {
         y: {
             formatter: function (val) {
