@@ -47,6 +47,10 @@ body {
     background-size: cover;
 }
 
+#legend-container {
+    margin-bottom: 10px;
+    /* ระยะห่างจากองค์ประกอบอื่น */
+}
 
 * {
     margin: 0;
@@ -196,6 +200,10 @@ nav {
         /* บังคับให้ใช้ขนาดนี้สำหรับโทรศัพท์มือถือ */
     }
 
+    /* #legend-container {
+        margin-bottom: 30px;
+    } */
+
 
 }
 
@@ -213,5 +221,14 @@ nav {
         font-size: 10px !important;
     }
 
-
+    #legend-container {
+        position: absolute;
+        /* หรือ fixed ขึ้นอยู่กับความต้องการ */
+        bottom: 30px;
+        right: 5px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 5px;
+        min-width: 180px;
+    }
 }
