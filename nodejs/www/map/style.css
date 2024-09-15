@@ -139,14 +139,12 @@ nav {
 
     .subtext {
         font-size: 10px;
-        /* ลดขนาดสำหรับโทรศัพท์มือถือ */
     }
 }
 
 @media only screen and (max-width:415px) {
     .subtext {
         font-size: 10px;
-        /* ลดขนาดสำหรับโทรศัพท์มือถือ */
     }
 
     .menu {
@@ -179,31 +177,21 @@ nav {
 /* dropdown */
 .custom-select {
     width: 100%;
-    /* หรือกำหนดขนาดตามต้องการ เช่น 300px */
 }
 
 /* Media query for small screens */
 @media (max-width: 768px) {
     .jumbotron {
         font-size: 12px;
-        /* ลดขนาดลงสำหรับหน้าจอเล็ก */
     }
 
     h3 {
         font-size: 16px;
-        /* ปรับขนาดหัวเรื่องให้เล็กลง */
     }
 
     .subtext {
         font-size: 10px !important;
-        /* บังคับให้ใช้ขนาดนี้สำหรับโทรศัพท์มือถือ */
     }
-
-    /* #legend-container {
-        margin-bottom: 30px;
-    } */
-
-
 }
 
 /* Media query for very small screens, e.g., phones */
@@ -222,7 +210,6 @@ nav {
 
     #legend-container {
         position: absolute;
-        /* หรือ fixed ขึ้นอยู่กับความต้องการ */
         bottom: 30px;
         right: 5px;
         background: rgba(255, 255, 255, 0.8);

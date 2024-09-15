@@ -16,20 +16,15 @@ h4 {
 .image-container {
     display: flex;
     justify-content: center;
-    /* จัดตำแหน่งให้อยู่ตรงกลางแนวนอน */
     align-items: center;
-    /* จัดตำแหน่งให้อยู่ตรงกลางแนวตั้ง */
     background-color: #f0f0f0;
     margin-top: 10px;
 }
 
 .image-container img {
     width: 45%;
-    /* กำหนดขนาดให้รูปแต่ละรูปเป็น 45% ของ container */
     height: auto;
-    /* รักษาอัตราส่วนภาพ */
     margin: 10px;
-    /* เพิ่มช่องว่างระหว่างรูป */
 }
 
 * {
@@ -150,7 +145,6 @@ nav {
 @media (max-width: 768px) {
     .image-container img {
         width: 70%;
-        /* ปรับขนาดรูปให้ใหญ่ขึ้นสำหรับหน้าจอขนาดกลาง */
     }
 }
 
@@ -158,13 +152,10 @@ nav {
 @media (max-width: 480px) {
     .image-container {
         flex-direction: column;
-        /* เปลี่ยนการจัดตำแหน่งรูปภาพเป็นแนวตั้ง */
     }
 
     .image-container img {
         width: 90%;
-        /* ปรับขนาดรูปให้ใหญ่ขึ้นสำหรับหน้าจอขนาดเล็ก */
         margin: 5px 0;
-        /* ลดช่องว่างระหว่างรูป */
     }
 }
