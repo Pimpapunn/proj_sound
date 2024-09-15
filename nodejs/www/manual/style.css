@@ -13,6 +13,24 @@ h4 {
 
 }
 
+.image-container {
+    display: flex;
+    justify-content: center;
+    /* จัดตำแหน่งให้อยู่ตรงกลางแนวนอน */
+    align-items: center;
+    /* จัดตำแหน่งให้อยู่ตรงกลางแนวตั้ง */
+    background-color: #f0f0f0;
+    margin-top: 30px;
+}
+
+.image-container img {
+    width: 45%;
+    /* กำหนดขนาดให้รูปแต่ละรูปเป็น 45% ของ container */
+    height: auto;
+    /* รักษาอัตราส่วนภาพ */
+    margin: 10px;
+    /* เพิ่มช่องว่างระหว่างรูป */
+}
 
 * {
     margin: 0;
