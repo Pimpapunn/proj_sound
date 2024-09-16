@@ -15,6 +15,20 @@ h4 {
 }
 
 
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin-top: 10px;
+}
+
+.image-container img {
+    width: 45%;
+    height: auto;
+    margin: 10px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -126,5 +140,23 @@ nav {
 
     .menu li:hover {
         background-color: #0b1b12;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container img {
+        width: 70%;
+    }
+}
+
+/* Media query for very small screens, e.g., phones */
+@media (max-width: 480px) {
+    .image-container {
+        flex-direction: column;
+    }
+
+    .image-container img {
+        width: 90%;
+        margin: 5px 0;
     }
 }
