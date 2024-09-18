@@ -59,17 +59,7 @@ function reply(reply_token) {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${process.env.channelAccessToken}`
     }
-    let body = JSON.stringify({
-        replyToken: reply_token,
-        messages: [{
-            type: 'text',
-            text: 'Hello'
-        },
-        {
-            type: 'text',
-            text: 'How are you?'
-        }]
-    })
+
     request.post({
         url: 'https://api.line.me/v2/bot/message/reply',
         headers: headers,
@@ -125,7 +115,6 @@ app.get('/sss/api/data', (req, res) => {
                     order by datetime DESC LIMIT 30`;
 
     pg.query(sql).then((r) => {
-        // console.log(r.rows)
         res.status(200).json(r.rows);
     })
 })
@@ -142,8 +131,8 @@ app.get('/sss/api/senddata/:stationname/:sound', (req, res) => {
     pg.query(sql).then((r) => {
         res.status(200).json({ status: "OK" })
     })
-
 })
+
 
 app.use("/sss/output", express.static('output'))
 app.use("/sss", express.static('www'))

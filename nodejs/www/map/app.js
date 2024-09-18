@@ -146,38 +146,31 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
     }
 
     setTimeout(() => {
-        // ตรวจสอบว่า windSpeedLayer ถูกกำหนดและใช้งานได้
         if (typeof windSpeedLayer !== 'undefined' && windSpeedLayer.options.renderer) {
-            // ดึงค่าขั้นต่ำและค่าสูงสุดจาก windSpeedLayer
             const min = windSpeedLayer.options.renderer.parent.min;
             const max = windSpeedLayer.options.renderer.parent.max;
 
-            // ตรวจสอบค่าของ min และ max
             if (isNaN(min) || isNaN(max)) {
                 console.error("Invalid min or max values");
                 return;
             }
 
-            // อัปเดตขอบเขตการแสดงของ renderer
             windSpeedLayer.options.renderer.setDisplayRange(min, windSpeedLayer.options.renderer.options.displayMax);
             windSpeedLayer.options.renderer.setDisplayRange(windSpeedLayer.options.renderer.options.displayMin, max);
 
-            // อัปเดต input fields ด้วยค่าปัจจุบัน
             document.getElementById("displayMin").value = min;
             document.getElementById("displayMax").value = max;
 
             // กำหนดจำนวนชั้นและคำนวณช่วงของ legend
-            var cls = 5; // จำนวนชั้นของ legend
-            var interval = (max - min) / cls; // คำนวณช่วงโดยใช้ค่าขั้นต่ำและค่าสูงสุด
-            var divlegend = ''; // เริ่มต้น divlegend เป็นสตริงว่าง
+            var cls = 5;
+            var interval = (max - min) / cls;
+            var divlegend = '';
 
-            // ดึงสีจาก dropdown ที่เลือก
             var colorScale = document.getElementById('colorScale').value;
 
-            // วนลูปเพื่อสร้างเนื้อหา legend
             for (var i = 0; i < cls; i++) {
-                var rangeMin = (min + (interval * i)).toFixed(2); // ปรับรูปแบบเป็นทศนิยม 2 ตำแหน่ง
-                var rangeMax = (min + (interval * (i + 1))).toFixed(2); // ปรับรูปแบบเป็นทศนิยม 2 ตำแหน่ง
+                var rangeMin = (min + (interval * i)).toFixed(2);
+                var rangeMax = (min + (interval * (i + 1))).toFixed(2);
                 var color = getColor(colorScale, i, cls);
 
                 divlegend += `<div>
@@ -186,30 +179,25 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
                           </div>`;
             }
 
-            // เพิ่มเนื้อหา legend ที่สร้างขึ้นไปยัง legend container
             document.getElementById('legend-content').innerHTML = divlegend;
 
-            // แสดงข้อมูล legend ใน console สำหรับการ debug
             console.log(divlegend);
         } else {
             console.error("windSpeedLayer is not defined or its renderer is not properly initialized.");
         }
     }, 2000);
 
-    // ฟังก์ชันสำหรับจัดการสีของ legend ตาม dropdown ที่เลือก
     document.addEventListener('DOMContentLoaded', function () {
         var colorScaleElement = document.getElementById('colorScale');
         var legendContent = document.getElementById('legend-content');
 
-        // ฟังก์ชันในการอัปเดต legend ตามสเกลสีที่เลือก
         function updateLegend(selectedScale) {
-            var cls = 5; // จำนวนชั้นของ legend
+            var cls = 5; // 
             var min = 0;
             var max = 10;
-            var interval = (max - min) / cls; // คำนวณช่วง
-            var divlegend = ''; // เริ่มต้น divlegend เป็นสตริงว่าง
+            var interval = (max - min) / cls;
+            var divlegend = '';
 
-            // วนลูปเพื่อสร้างเนื้อหา legend
             for (var i = 0; i < cls; i++) {
                 var rangeMin = (min + (interval * i)).toFixed(2);
                 var rangeMax = (min + (interval * (i + 1))).toFixed(2);
@@ -219,16 +207,13 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
                           </div>`;
             }
 
-            // อัปเดตเนื้อหา legend
             legendContent.innerHTML = divlegend;
         }
 
-        // เพิ่ม listener สำหรับการเปลี่ยนค่าใน dropdown
         colorScaleElement.addEventListener('change', function () {
-            updateLegend(this.value); // อัปเดต legend ด้วยสเกลที่เลือก
+            updateLegend(this.value);
         });
 
-        // เริ่มต้น legend ด้วยสเกลสีดีฟอลต์
         updateLegend(colorScaleElement.value);
     });
 
@@ -295,6 +280,8 @@ async function showGeotiff(dayName, timeStart, timeEnd) {
 
 
 // const server = "http://localhost:5400/bds/interpolation"
+
+
 const server = "https://geodev.fun/bds/interpolation"
 
 function getData() {
@@ -328,7 +315,5 @@ function getData() {
         .catch(error => {
             console.error('Error:', error);
         });
-
-
 }
 

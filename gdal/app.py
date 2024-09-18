@@ -39,7 +39,8 @@ try:
         print(sql)
         stat_shp = os.path.join(os.getcwd(), 'output', 'stat_shp.shp') 
         # stat_shp = f'''stat_shp.shp'''
-        cmd = f'''ogr2ogr -overwrite -f "ESRI Shapefile" {stat_shp} PG:"host={dbServer} user={dbUser} dbname={dbName} password={dbPass}" -sql "{sql}"'''
+        cmd = f'''ogr2ogr -overwrite -f "ESRI Shapefile" {stat_shp} PG:"host={dbServer} 
+        user={dbUser} dbname={dbName} password={dbPass}" -sql "{sql}"'''
         os.system(cmd)
         print("shp created")
 
