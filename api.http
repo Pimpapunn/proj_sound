@@ -17,7 +17,7 @@ content-type: application/json
 }
 
 ###
-POST const server = "https://geodev.fun/bds/interpolation" HTTP/1.1
+POST https://geodev.fun/bds/interpolation HTTP/1.1
 content-type: application/json
 {
     "dayName": "sunday",
