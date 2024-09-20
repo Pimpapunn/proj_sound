@@ -16,15 +16,14 @@ content-type: application/json
     "timeEnd": "17"
 }
 
-# ###
-# POST const server = "https://geodev.fun/bds/interpolation" HTTP/1.1
-# content-type: application/json
-
-# {
-#     "dayName": "sunday",
-#     "timeStart": "16",
-#     "timeEnd": "17"
-# }
+###
+POST const server = "https://geodev.fun/bds/interpolation" HTTP/1.1
+content-type: application/json
+{
+    "dayName": "sunday",
+    "timeStart": "16",
+    "timeEnd": "17"
+}
 
 
 ###
