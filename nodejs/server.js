@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const axios = require("axios");
 const { Pool } = require('pg');
-// const line = require("@line/bot-sdk");
+
 const pg = new Pool({
     host: 'postgis',
     port: 5432,
