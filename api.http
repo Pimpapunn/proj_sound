@@ -6,18 +6,8 @@ content-type: application/json
 }
 
 
-# ###
-# POST http://localhost:5400/bds/interpolation HTTP/1.1
-# content-type: application/json
-
-# {
-#     "dayName": "sunday",
-#     "timeStart": "16",
-#     "timeEnd": "17"
-# }
-
 ###
-POST const server = "https://geodev.fun/bds/interpolation" HTTP/1.1
+POST http://localhost:5400/bds/interpolation HTTP/1.1
 content-type: application/json
 
 {
@@ -25,6 +15,16 @@ content-type: application/json
     "timeStart": "16",
     "timeEnd": "17"
 }
+
+# ###
+# POST const server = "https://geodev.fun/bds/interpolation" HTTP/1.1
+# content-type: application/json
+
+# {
+#     "dayName": "sunday",
+#     "timeStart": "16",
+#     "timeEnd": "17"
+# }
 
 
 ###
