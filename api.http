@@ -12,8 +12,8 @@ content-type: application/json
 
 {
     "dayName": "sunday",
-    "timeStart": "16",
-    "timeEnd": "17"
+    "timeStart": "15",
+    "timeEnd": "16"
 }
 
 
