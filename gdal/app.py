@@ -2,7 +2,6 @@ from osgeo import gdal, ogr
 import os
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-
 import json
 import subprocess
 
@@ -20,13 +19,14 @@ try:
     def post():
         data = request.json["name"]
         return jsonify(message='Hello, ' + data), 200
-
+    
+#คำสั่งการแปลงข้อมูลเป็นไฟล์tif
     @app.route('/bds/interpolation', methods=['POST'])
     def getisoline():
         dayName = request.json["dayName"]
         timeStart = request.json["timeStart"]
         timeEnd = request.json["timeEnd"]
-        
+
         print(dayName, timeStart, timeEnd)
         fld = 'savg'
         tiffpath = "./tiff"
@@ -38,13 +38,12 @@ try:
                     GROUP BY geom, stationname, lat, lng'''
         print(sql)
         stat_shp = os.path.join(os.getcwd(), 'output', 'stat_shp.shp') 
-        # stat_shp = f'''stat_shp.shp'''
+# stat_shp = f'''stat_shp.shp'''
         cmd = f'''ogr2ogr -overwrite -f "ESRI Shapefile" {stat_shp} PG:"host={dbServer} 
         user={dbUser} dbname={dbName} password={dbPass}" -sql "{sql}"'''
         os.system(cmd)
         print("shp created")
-
-        # output_raster = f'output/idw_{dayName}_{timeStart}{timeEnd}.tif'
+# output_raster = f'output/idw_{dayName}_{timeStart}{timeEnd}.tif'
         output_raster = os.path.join(os.getcwd(), 'output', f'idw_{dayName}_{timeStart}{timeEnd}.tif')
         cmd = f'''gdal_grid -a invdist:power=2:max_points=15:min_points=3 \
         -outsize 100 100 \
@@ -53,31 +52,12 @@ try:
         {stat_shp} {output_raster}'''
         os.system(cmd)
         
-        # output_raster_fix = os.path.join(os.getcwd(), 'output', f'idw_fixed.tif')
-        # cmd = f'''gdal_grid -a invdist:power=2:max_points=15:min_points=3 \
-        # -outsize 100 100 \
-        # -of GTiff \
-        # -zfield "{fld}" \
-        # {stat_shp} {output_raster_fix}'''
-        # os.system(cmd)
-
+#คำสั่งการเก็บบันทึกข้อมูลไว้ที่ไฟล์output
         interval = 40
         output_geojson_filename = f'output/idw_{dayName}_{timeStart}{timeEnd}.geojson'
         cmd = ['gdal_contour', '-a', fld, '-i', str(interval), output_raster, output_geojson_filename]
 
         return jsonify(status='success!!'), 200
-
-        # try:
-        #     subprocess.check_call(cmd)
-        #     with open(output_geojson_filename, 'r') as geojson_file:
-        #         geojson_data = json.load(geojson_file)
-        #     return jsonify(geojson_data), 200
-        # except subprocess.CalledProcessError:
-        #     return jsonify(error='Error running gdal_contour'), 500
-        # except FileNotFoundError:
-        #     return jsonify(error='GeoJSON file not found'), 404
-
-
 
 except ImportError:
     print("GDAL's Python bindings are not installed!")

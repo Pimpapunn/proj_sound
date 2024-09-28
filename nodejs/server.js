@@ -14,7 +14,6 @@ const pg = new Pool({
 
 require('dotenv').config()
 
-// console.log(process.env.channelAccessToken);
 const config = {
     channelAccessToken: process.env.channelAccessToken,
     channelSecret: process.env.channelSecret,
@@ -76,7 +75,7 @@ function pushMessage(userId, messageText) {
         url: 'https://api.line.me/v2/bot/message/push',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.channelAccessToken}`  // แทนที่ด้วย Channel Access Token ของคุณ
+            'Authorization': `Bearer ${process.env.channelAccessToken}`  // แทนที่ด้วย Channel Access Token 
         },
         json: {
             to: userId,  // userId ที่ต้องการส่งข้อความไป
@@ -101,13 +100,13 @@ function pushMessage(userId, messageText) {
     });
 }
 
-// ตัวอย่างการเรียกใช้ฟังก์ชัน pushMessage
-
+// การเรียกใช้ฟังก์ชัน pushMessage
 app.get('/sss/api/sendmessage/:msg', (req, res) => {
     const { msg } = req.params
     pushMessage('U68ce358be4a90e1aa42dab9fd74a20e8', msg);
     res.json({ status: "success" })
 })
+
 
 app.get('/sss/api/data', (req, res) => {
     let sql = `select *,datetime as ts 
@@ -132,7 +131,6 @@ app.get('/sss/api/senddata/:stationname/:sound', (req, res) => {
         res.status(200).json({ status: "OK" })
     })
 })
-
 
 app.use("/sss/output", express.static('output'))
 app.use("/sss", express.static('www'))
